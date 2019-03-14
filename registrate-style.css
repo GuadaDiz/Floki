@@ -1,0 +1,224 @@
+/* Colores: Turquesa #98DAE0 #CFE3E3
+            Azul oscuro #0D4659*/
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* HEADER */
+ul {
+  padding-left: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+header {
+  height: 20vh;
+  width: 100vw;
+}
+header p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.promocion{
+  height: 5vh;
+  background-color: #0D4659;
+  color: white;
+  padding-top: 14px;
+  padding-bottom:10px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+.main-nav{
+  height: 15vh;
+  background-color: white;
+}
+.main-nav li{
+  color: #0D4659;
+  background-color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  font-size: 12px;
+}
+header div {
+  margin: 0px;
+}
+.logo {
+  border: none;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  height: 5vh;
+  width: 8vw;
+  display: inline-block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 8vh;
+  left: 50%;
+}
+.barra {
+  float: left;
+  margin-right: 40px;
+  margin-left: 40px;
+  padding-top: 11vh;
+}
+.login-signin{
+  float: right;
+  margin-right: 30px;
+  padding-top: 11vh;
+
+}
+.shoppingcart{
+  float: right;
+  margin-right: 20px;
+  padding-top: 11vh;
+  margin-right: 40px;
+
+}
+.barra:hover, .login-signin:hover, .shoppingcart:hover{
+  color: rgba(13, 70, 89, 0.7);
+  font-size: 1.005em;
+}
+
+/* SECTION*/
+.section {
+background-image: image(Images/fondomarmol.jpg);
+overflow: hidden;
+height: 80vh;
+width: 100vw;
+}
+
+.art1 {
+  width: 50vw;
+  height: 80vh;
+  float: left;
+  display: inline-block;
+}
+.art2 {
+  float: left;
+  height: 80vh;
+  display: inline-block;
+}
+.registrarsecon{
+  height: 5vh;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 4px;
+  border-bottom: 1px solid white;
+}
+.reg {
+  width: 14.5vw;
+  float: left;
+}
+
+.fab {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+.fab:hover{
+  color: #0D4659;
+}
+
+.formulario {
+  background-color: #CFE3E3;
+  border-width: 2px;
+  border-color: #444;
+  width: 50vw;
+  height: 80vh;
+  padding: 40px;
+  position: absolute;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  display: inline-block;
+}
+
+form label {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+form input {
+  color: #98DAE0;
+  text-align: center;
+}
+.registrate {
+  font-family: 'Lusitana', serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #0D4659;
+  letter-spacing: 2px;
+}
+#nombre , #apellido , #email , #contraseña {
+  box-sizing: border-box;
+  width: 60%;
+  height: 5vh;
+  color: #0D4659;
+  font-size: 0.75em;
+  background-color: white;
+  border: 2px solid white;
+  padding: 4px;
+  margin-top: 3px;
+  text-transform: uppercase;
+}
+
+#nombre:hover, #apellido:hover, #email:hover, #contraseña:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#send-button {
+  box-sizing: border-box;
+  width: 25%;
+  height: 40px;
+  color: #0D4659;
+  font-size: 1em;
+  text-transform: uppercase;
+  background-color: white;
+  border: none;
+  border-radius: 0px;
+  margin-top: 20px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+#send-button:hover {
+  color: white;
+  background-color: #0D4659;
+}
+#sen-button:focus {
+  box-shadow: none;
+}
+
+form input[type=checkbox] {
+color: #CFE3E3;
+  font-size: 0.5em;
+}
+
+
+
+
+@media (max-width: 635px) {
+  .formulario {
+    width: 80%;
+  }
+  #nombre , #apellido , #email , #contraseña {
+      width: 80%;
+    }
+  #send-button {
+    width: 35%;
+}
+
+@media (max-width: 339px) {
+  .formulario {
+    width: 90%;
+  }
+  #nombre , #apellido , #email , #contraseña {
+      width: 85%;
+    }
+  #send-button {
+    width: 60%;
+}
