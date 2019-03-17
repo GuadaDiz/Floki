@@ -1,0 +1,346 @@
+/* Colores: Turquesa #98DAE0 #CFE3E3
+            Azul oscuro #0D4659*/
+
+/* Reseteos */
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+ol, ul, a{
+  padding: 0px;
+}
+/* HEADER */
+header{
+  height: 20vh;
+}
+
+  /*Promocion*/
+.promocion {
+  background-color: #0D4659;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  height: 5vh;
+  margin-bottom: 0px;
+}
+/*Caja search-logo-nav*/
+.search-logo-nav {
+  overflow: hidden;
+  height: 10vh;
+  color: #0D4659;
+  text-transform: uppercase;
+  padding-top: 30px;
+}
+
+  /*Logo*/
+ .logo{
+   display: inline-block;
+   width: 55%;
+   float: left;
+   margin-right: 5%;
+ }
+ .logotipo {
+   height: 40px;
+   width: auto;
+ }
+
+ /*Search*/
+ .search {
+   width: 20%;
+   float: left;
+   text-align: right;
+ }
+
+ .search button {
+   border: none;
+   color: #0D4659;
+ }
+ .search button:hover {
+   background-color: #0D4659;
+   color: #fff;
+ }
+ .search button:active {
+   background-color: #0D4659;
+   color: #fff;
+ }
+
+ .search input {
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   border-radius: 0px;
+   text-align: right;
+}
+
+.form-control {
+  width: 50%;
+}
+
+ /* Nav Carrito, sign in y log in*/
+.nav1 {
+  float: right;
+  width: 20%;
+}
+
+.container-search-logo-nav {
+  overflow: hidden;
+  text-align: right;
+}
+.shoppingcart {
+  float: right;
+  text-align: right;
+}
+.shoppingcart:hover{
+  color: #CFE3E3;
+}
+
+.login-signin {
+  float: right;
+  text-align: right;
+}
+
+.menubtn {
+  background-color: #0D4659;
+  color: #fff;
+  text-align: left;
+}
+.menubtn:hover{
+  background-color: rgba(13, 70, 89, 0.7);
+}
+
+/*ONLY MOBILE*/
+.onlymobile {
+  width: 33.33%;
+  float: left;
+  height: 5vh;
+}
+
+.btn-onlymobile {
+  padding-left: 30px;
+}
+
+.logo-onlymobile {
+  text-align: center;
+}
+
+.menu-onlymobile ul{
+  flex-direction: row-reverse;
+  text-align: right;
+  padding-right: 30px;
+  margin-bottom: 10px;
+}
+.search-onlymobile, .shoppingcart-onlymobile {
+width: 15%;
+  display: inline-block;
+}
+
+  /*Navigation Bar*/
+.menubar {
+  height: 5vh;
+  padding: 0px;
+  margin: 0px;
+  justify-content: center;
+}
+
+.container{
+text-transform: uppercase;
+color:#0D4659;
+padding: 0px;
+margin: 0px;
+justify-content: center;
+}
+
+.container ul{
+justify-content: center;
+}
+
+.container li{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.nav-link {
+  padding: 0px;
+}
+.nav-link:hover{
+  color: rgba(13, 70, 89, 0.7);
+}
+
+
+/* SECTION*/
+.section {
+background-image: image(Images/fondomarmol.jpg);
+overflow: hidden;
+height: 80vh;
+width: 100vw;
+}
+
+/*Imagen*/
+.art1 {
+  float: left;
+  width: 50vw;
+  height: 80vh;
+  float: left;
+  display: inline-block;
+}
+
+/*Formulario*/
+.art2 {
+  float: left;
+  height: 80vh;
+  display: inline-block;
+}
+.ingresarcon{
+  height: 5vh;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 4px;
+  border-bottom: none;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  justify-content: center;
+}
+.ing {
+  width: 14vw;
+  float: left;
+}
+
+.fab {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+.fab:hover{
+  color: #0D4659;
+}
+.o-wrap {
+  position: relative;
+  margin-bottom: 50px;
+}
+hr {
+  border-color: #fff;
+  border-width: 2px;
+  width: 30%;
+}
+.fa-circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top:50%;
+  left: 50%;
+  padding: 0px 10px;
+  background-color: #CFE3E3;
+  color: #fff;
+}
+.formulario {
+  background-color: #CFE3E3;
+  border-width: 2px;
+  border-color: #444;
+  width: 50vw;
+  height: 80vh;
+  padding: 40px;
+  position: absolute;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  display: inline-block;
+}
+
+form label {
+  color: #0D4659;
+  text-transform: capitalize;
+}
+
+form input {
+  color: #98DAE0;
+  text-align: center;
+}
+.ingresa {
+  font-family: 'Lusitana', serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #0D4659;
+  letter-spacing: 2px;
+}
+#nombre , #apellido , #email , #contraseña {
+  box-sizing: border-box;
+  width: 60%;
+  height: 5vh;
+  color: #0D4659;
+  font-size: 0.75em;
+  background-color: white;
+  border: 2px solid white;
+  padding: 4px;
+  margin-top: 3px;
+  text-transform: uppercase;
+}
+
+#nombre:hover, #apellido:hover, #email:hover, #contraseña:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#send-button {
+  box-sizing: border-box;
+  width: 25%;
+  height: 40px;
+  color: #0D4659;
+  font-size: 1em;
+  text-transform: uppercase;
+  background-color: white;
+  border: none;
+  border-radius: 0px;
+  margin-top: 60px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+#send-button:hover {
+  color: white;
+  background-color: #0D4659;
+}
+#sen-button:focus {
+  box-shadow: none;
+}
+
+
+
+@media (max-width:1199px) {
+.art2 {
+  width: 100vw;
+  display: block;
+}
+.formulario {
+  width: 100vw;
+  padding-top: 30px;
+
+}
+.ing{
+  width: 33%;
+}
+.ingresa{
+  margin-bottom: 20px;
+}
+#nombre{
+  margin-top: 20px;
+}
+#send-button{
+  width: 30%;
+  margin-top: 10px;
+}
+}
+
+@media (max-width:990px) {
+  .art2{
+    height: 90vh;
+  }
+}
+
+@media (min-width: 576px){
+  .form-inline .form-control {
+    width: 60%;
+}
