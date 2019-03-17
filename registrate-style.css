@@ -1,5 +1,7 @@
 /* Colores: Turquesa #98DAE0 #CFE3E3
             Azul oscuro #0D4659*/
+
+/* Reseteos */
 * {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
@@ -8,80 +10,170 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+li {
+  list-style-type: none;
+}
+
+ol, ul, a{
+  padding: 0px;
+}
 /* HEADER */
-ul {
-  padding-left: 0px;
-  margin: 0px;
-  overflow: hidden;
-}
-header {
+header{
   height: 20vh;
-  width: 100vw;
 }
-header p{
-  margin-top: 0px;
+
+  /*Promocion*/
+.promocion {
+  background-color: #0D4659;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  height: 5vh;
   margin-bottom: 0px;
 }
-.promocion{
-  height: 5vh;
-  background-color: #0D4659;
-  color: white;
-  padding-top: 14px;
-  padding-bottom:10px;
-  text-align: center;
-  letter-spacing: 2px;
-  font-size: 13px;
-}
-.main-nav{
-  height: 15vh;
-  background-color: white;
-}
-.main-nav li{
+/*Caja search-logo-nav*/
+.search-logo-nav {
+  overflow: hidden;
+  height: 10vh;
   color: #0D4659;
-  background-color: white;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  display: block;
-  font-size: 12px;
+  padding-top: 30px;
 }
-header div {
-  margin: 0px;
+
+  /*Logo*/
+ .logo{
+   display: inline-block;
+   width: 55%;
+   float: left;
+   margin-right: 5%;
+ }
+ .logotipo {
+   height: 40px;
+   width: auto;
+ }
+
+ /*Search*/
+ .search {
+   width: 20%;
+   float: left;
+   text-align: right;
+ }
+
+ .search button {
+   border: none;
+   color: #0D4659;
+ }
+ .search button:hover {
+   background-color: #0D4659;
+   color: #fff;
+ }
+ .search button:active {
+   background-color: #0D4659;
+   color: #fff;
+ }
+
+ .search input {
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   border-radius: 0px;
+   text-align: right;
 }
-.logo {
-  border: none;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  height: 5vh;
-  width: 8vw;
-  display: inline-block;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 8vh;
-  left: 50%;
+
+.form-control {
+  width: 50%;
 }
-.barra {
+
+ /* Nav Carrito, sign in y log in*/
+.nav1 {
+  float: right;
+  width: 20%;
+}
+
+.container-search-logo-nav {
+  overflow: hidden;
+  text-align: right;
+}
+.shoppingcart {
+  float: right;
+  text-align: right;
+}
+.shoppingcart:hover{
+  color: #CFE3E3;
+}
+
+.login-signin {
+  float: right;
+  text-align: right;
+}
+
+.menubtn {
+  background-color: #0D4659;
+  color: #fff;
+  text-align: left;
+}
+.menubtn:hover{
+  background-color: rgba(13, 70, 89, 0.7);
+}
+
+/*ONLY MOBILE*/
+.onlymobile {
+  width: 33.33%;
   float: left;
-  margin-right: 40px;
-  margin-left: 40px;
-  padding-top: 11vh;
+  height: 5vh;
 }
-.login-signin{
-  float: right;
-  margin-right: 30px;
-  padding-top: 11vh;
 
+.btn-onlymobile {
+  padding-left: 30px;
 }
-.shoppingcart{
-  float: right;
-  margin-right: 20px;
-  padding-top: 11vh;
-  margin-right: 40px;
 
+.logo-onlymobile {
+  text-align: center;
 }
-.barra:hover, .login-signin:hover, .shoppingcart:hover{
+
+.menu-onlymobile ul{
+  flex-direction: row-reverse;
+  text-align: right;
+  padding-right: 30px;
+  margin-bottom: 10px;
+}
+.search-onlymobile, .shoppingcart-onlymobile {
+width: 15%;
+  display: inline-block;
+}
+
+  /*Navigation Bar*/
+.menubar {
+  height: 5vh;
+  padding: 0px;
+  margin: 0px;
+  justify-content: center;
+}
+
+.container{
+text-transform: uppercase;
+color:#0D4659;
+padding: 0px;
+margin: 0px;
+justify-content: center;
+}
+
+.container ul{
+justify-content: center;
+}
+
+.container li{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.nav-link {
+  padding: 0px;
+}
+.nav-link:hover{
   color: rgba(13, 70, 89, 0.7);
-  font-size: 1.005em;
 }
+
 
 /* SECTION*/
 .section {
@@ -91,12 +183,15 @@ height: 80vh;
 width: 100vw;
 }
 
+/*Imagen*/
 .art1 {
   width: 50vw;
   height: 80vh;
   float: left;
   display: inline-block;
 }
+
+/*Formulario*/
 .art2 {
   float: left;
   height: 80vh;
@@ -107,10 +202,13 @@ width: 100vw;
   overflow: hidden;
   text-align: center;
   padding-bottom: 4px;
-  border-bottom: 1px solid white;
+  border-bottom: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  justify-content: center;
 }
 .reg {
-  width: 14.5vw;
+  width: 14vw;
   float: left;
 }
 
@@ -122,7 +220,23 @@ width: 100vw;
 .fab:hover{
   color: #0D4659;
 }
-
+.o-wrap {
+  position: relative;
+}
+hr {
+  border-color: #fff;
+  border-width: 2px;
+  width: 30%;
+}
+.fa-circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top:50%;
+  left: 50%;
+  padding: 0px 10px;
+  background-color: #CFE3E3;
+  color: #fff;
+}
 .formulario {
   background-color: #CFE3E3;
   border-width: 2px;
@@ -198,27 +312,38 @@ color: #CFE3E3;
   font-size: 0.5em;
 }
 
+@media (max-width:1199px) {
+.art2 {
+  width: 100vw;
+  display: block;
+}
+.formulario {
+  width: 100vw;
+  padding-top: 30px;
 
-
-
-@media (max-width: 635px) {
-  .formulario {
-    width: 80%;
-  }
-  #nombre , #apellido , #email , #contraseña {
-      width: 80%;
-    }
-  #send-button {
-    width: 35%;
+}
+.reg{
+  width: 33%;
+}
+.registrate{
+  margin-bottom: 20px;
+}
+#nombre{
+  margin-top: 20px;
+}
+#send-button{
+  width: 30%;
+  margin-top: 10px;
+}
 }
 
-@media (max-width: 339px) {
-  .formulario {
-    width: 90%;
+@media (max-width:990px) {
+  .art2{
+    height: 90vh;
   }
-  #nombre , #apellido , #email , #contraseña {
-      width: 85%;
-    }
-  #send-button {
+}
+
+@media (min-width: 576px){
+  .form-inline .form-control {
     width: 60%;
 }
