@@ -1,5 +1,3 @@
-/* Colores: Turquesa #98DAE0 #CFE3E3
-            Azul oscuro #0D4659*/
 * {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
@@ -17,6 +15,8 @@ header marquee {
   background-color: #0d4659;
   color: #ffffff;
   font-size: 14px;
+  height: 30px;
+  padding: 5px;
 }
 
 /* header : user navbar */
@@ -30,16 +30,110 @@ header marquee {
 .shoppingcart:hover {
   color: #cfe3e3;
 }
-
+.logo-mininav{
+  overflow: hidden;
+}
 /* header: logo */
 .header-logo {
-  width: 20%;
-  margin: 0 auto;
+  width: 55%;
+  margin: 0;
+  height: 80px;
+  text-align: right;
+  display: inline-block;
+  float: left;
+}
+.logoo-mobile{
+  margin: 0;
+  height: 80px;
+  text-align: center;
+  display: inline-block;
 }
 .header-logo img {
-  width: 100%;
+  width: auto;
 }
 
+.search {
+  width: 20%;
+  float: left;
+  text-align: right;
+  padding-top: 20px;
+  margin-left: 5%;
+}
+
+.search button {
+  border: none;
+  color: #0D4659;
+}
+.search button:hover {
+  background-color: #0D4659;
+  color: #fff;
+}
+.search button:active {
+  background-color: #0D4659;
+  color: #fff;
+}
+
+.search input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0px;
+  text-align: right;
+}
+.nav1 {
+  width: 20%;
+  text-align: right;
+  padding-right: 30px;
+  padding-top: 12px;
+  float: right;
+  text-transform: uppercase;
+  color: #0D4659;
+}
+
+.login-signin {
+  white-space: nowrap;
+}
+/*Only Mobile*/
+.row{
+  width: 100%;
+}
+.onlymobile {
+  width: 33.33%;
+  float: left;
+  height: 60px;
+}
+
+.btn-onlymobile {
+  padding-left: 50px;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.menubtn {
+  background-color: #0D4659;
+  border: #0D4659;
+  text-align: left;
+}
+.menubtn:hover{
+  background-color: #98DAE0;
+  border: #98DAE0;
+}
+
+.logo-onlymobile {
+  text-align: center;
+}
+
+.menu-onlymobile ul{
+  flex-direction: row-reverse;
+  text-align: right;
+  padding-right: 30px;
+  margin-top: 10px;
+  color: #0D4659;
+}
+.search-onlymobile, .shoppingcart-onlymobile {
+width: 25%;
+  display: inline-block;
+}
 /* main navbar */
 .navbar ul {
   width: 100%;
@@ -221,3 +315,7 @@ header marquee {
 .footer-shop .nav-link {
   font-size: 20px;
 }
+
+@media (min-width: 576px){
+.form-inline .form-control {
+  width: 50%;}}
