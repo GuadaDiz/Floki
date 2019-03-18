@@ -173,7 +173,6 @@ width: 100vw;
 
 /*Imagen*/
 .art1 {
-  float: left;
   width: 50vw;
   height: 80vh;
   float: left;
@@ -186,17 +185,18 @@ width: 100vw;
   height: 80vh;
   display: inline-block;
 }
-.ingresarcon{
+
+.registrarsecon{
   height: 5vh;
   overflow: hidden;
   text-align: center;
   padding-bottom: 4px;
   border-bottom: none;
-  margin-bottom: 20px;
-  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
   justify-content: center;
 }
-.ing {
+.reg {
   width: 14vw;
   float: left;
 }
@@ -211,7 +211,6 @@ width: 100vw;
 }
 .o-wrap {
   position: relative;
-  margin-bottom: 50px;
 }
 hr {
   border-color: #fff;
@@ -241,22 +240,29 @@ hr {
 }
 
 form label {
-  color: #0D4659;
-  text-transform: capitalize;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 form input {
   color: #98DAE0;
   text-align: center;
 }
-.ingresa {
+.registrate {
   font-family: 'Lusitana', serif;
   font-size: 30px;
   text-transform: uppercase;
   color: #0D4659;
   letter-spacing: 2px;
 }
-#nombre , #apellido , #email , #contraseña {
+
+.mensaje-contacto{
+  border-style: none;
+}
+
+#nombre , #apellido , #email , #contraseña, #mensaje {
   box-sizing: border-box;
   width: 60%;
   height: 5vh;
@@ -269,7 +275,11 @@ form input {
   text-transform: uppercase;
 }
 
-#nombre:hover, #apellido:hover, #email:hover, #contraseña:hover{
+#mensaje{
+  height: 15vh;
+}
+
+#nombre:hover, #apellido:hover, #email:hover, #contraseña:hover, #mensaje:hover{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #send-button {
@@ -282,7 +292,7 @@ form input {
   background-color: white;
   border: none;
   border-radius: 0px;
-  margin-top: 60px;
+  margin-top: 20px;
   padding: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
@@ -295,6 +305,35 @@ form input {
   box-shadow: none;
 }
 
+form input[type=checkbox] {
+color: #CFE3E3;
+  font-size: 0.5em;
+}
+
+@media (max-width:1199px) {
+.art2 {
+  width: 100vw;
+  display: block;
+}
+.formulario {
+  width: 100vw;
+  padding-top: 30px;
+
+}
+.reg{
+  width: 33%;
+}
+.registrate{
+  margin-bottom: 20px;
+}
+#nombre{
+  margin-top: 20px;
+}
+#send-button{
+  width: 30%;
+  margin-top: 10px;
+}
+}
 
 /* footer */
 
@@ -332,39 +371,13 @@ form input {
   font-size: 20px;
 }
 
-
-@media (max-width:1199px) {
-.art2 {
-  width: 100vw;
-  display: block;
-}
-.formulario {
-  width: 100vw;
-  padding-top: 30px;
-
-}
-.ing{
-  width: 33%;
-}
-.ingresa{
-  margin-bottom: 20px;
-}
-#nombre{
-  margin-top: 20px;
-}
-#send-button{
-  width: 30%;
-  margin-top: 10px;
-}
-}
-
 @media (max-width:990px) {
   .art2{
     height: 90vh;
   }
 }
 
-
 @media (min-width: 576px){
-.form-inline .form-control {
-  width: 50%;}}
+  .form-inline .form-control {
+    width: 60%;
+}
