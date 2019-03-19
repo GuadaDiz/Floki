@@ -114,6 +114,8 @@ header marquee {
   border: #0D4659;
   text-align: left;
   color:white;
+  padding-top:8px;
+  padding-bottom: 8px;
 }
 .menubtn:hover{
   background-color: #98DAE0;
