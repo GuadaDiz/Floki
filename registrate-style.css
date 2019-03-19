@@ -113,6 +113,7 @@ header marquee {
   background-color: #0D4659;
   border: #0D4659;
   text-align: left;
+  color: white;
 }
 .menubtn:hover{
   background-color: #98DAE0;

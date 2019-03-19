@@ -30,7 +30,7 @@ header marquee {
 .shoppingcart:hover {
   color: #cfe3e3;
 }
-.logo-mininav{
+.logo-mininav {
   overflow: hidden;
 }
 /* header: logo */
@@ -42,7 +42,7 @@ header marquee {
   display: inline-block;
   float: left;
 }
-.logoo-mobile{
+.logoo-mobile {
   margin: 0;
   height: 80px;
   text-align: center;
@@ -62,14 +62,14 @@ header marquee {
 
 .search button {
   border: none;
-  color: #0D4659;
+  color: #0d4659;
 }
 .search button:hover {
-  background-color: #0D4659;
+  background-color: #0d4659;
   color: #fff;
 }
 .search button:active {
-  background-color: #0D4659;
+  background-color: #0d4659;
   color: #fff;
 }
 
@@ -87,14 +87,14 @@ header marquee {
   padding-top: 12px;
   float: right;
   text-transform: uppercase;
-  color: #0D4659;
+  color: #0d4659;
 }
 
 .login-signin {
   white-space: nowrap;
 }
 /*Only Mobile*/
-.row{
+.row {
   width: 100%;
 }
 .onlymobile {
@@ -110,30 +110,33 @@ header marquee {
 }
 
 .menubtn {
-  background-color: #0D4659;
-  border: #0D4659;
+  background-color: #0d4659;
+  border: #0d4659;
   text-align: left;
+  color: white;
 }
-.menubtn:hover{
-  background-color: #98DAE0;
-  border: #98DAE0;
+.menubtn:hover {
+  background-color: #98dae0;
+  border: #98dae0;
 }
 
 .logo-onlymobile {
   text-align: center;
 }
 
-.menu-onlymobile ul{
+.menu-onlymobile ul {
   flex-direction: row-reverse;
   text-align: right;
   padding-right: 30px;
   margin-top: 10px;
-  color: #0D4659;
+  color: #0d4659;
 }
-.search-onlymobile, .shoppingcart-onlymobile {
-width: 25%;
+.search-onlymobile,
+.shoppingcart-onlymobile {
+  width: 25%;
   display: inline-block;
 }
+
 /* main navbar */
 .navbar ul {
   width: 100%;
@@ -165,10 +168,10 @@ width: 25%;
 
 /* SECTION*/
 .section {
-background-image: image(Images/fondomarmol.jpg);
-overflow: hidden;
-height: 80vh;
-width: 100vw;
+  background-image: image(Images/fondomarmol.jpg);
+  overflow: hidden;
+  height: 80vh;
+  width: 100vw;
 }
 
 /*Imagen*/
@@ -186,7 +189,7 @@ width: 100vw;
   height: 80vh;
   display: inline-block;
 }
-.ingresarcon{
+.ingresarcon {
   height: 5vh;
   overflow: hidden;
   text-align: center;
@@ -206,8 +209,8 @@ width: 100vw;
   color: white;
   font-size: 25px;
 }
-.fab:hover{
-  color: #0D4659;
+.fab:hover {
+  color: #0d4659;
 }
 .o-wrap {
   position: relative;
@@ -221,14 +224,14 @@ hr {
 .fa-circle {
   position: absolute;
   transform: translate(-50%, -50%);
-  top:50%;
+  top: 50%;
   left: 50%;
   padding: 0px 10px;
-  background-color: #CFE3E3;
+  background-color: #cfe3e3;
   color: #fff;
 }
 .formulario {
-  background-color: #CFE3E3;
+  background-color: #cfe3e3;
   border-width: 2px;
   border-color: #444;
   width: 50vw;
@@ -241,26 +244,29 @@ hr {
 }
 
 form label {
-  color: #0D4659;
+  color: #0d4659;
   text-transform: capitalize;
 }
 
 form input {
-  color: #98DAE0;
+  color: #98dae0;
   text-align: center;
 }
 .ingresa {
   font-family: 'Lusitana', serif;
   font-size: 30px;
   text-transform: uppercase;
-  color: #0D4659;
+  color: #0d4659;
   letter-spacing: 2px;
 }
-#nombre , #apellido , #email , #contraseña {
+#nombre,
+#apellido,
+#email,
+#contraseña {
   box-sizing: border-box;
   width: 60%;
   height: 5vh;
-  color: #0D4659;
+  color: #0d4659;
   font-size: 0.75em;
   background-color: white;
   border: 2px solid white;
@@ -269,14 +275,17 @@ form input {
   text-transform: uppercase;
 }
 
-#nombre:hover, #apellido:hover, #email:hover, #contraseña:hover{
+#nombre:hover,
+#apellido:hover,
+#email:hover,
+#contraseña:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #send-button {
   box-sizing: border-box;
   width: 25%;
   height: 40px;
-  color: #0D4659;
+  color: #0d4659;
   font-size: 1em;
   text-transform: uppercase;
   background-color: white;
@@ -289,12 +298,11 @@ form input {
 }
 #send-button:hover {
   color: white;
-  background-color: #0D4659;
+  background-color: #0d4659;
 }
 #sen-button:focus {
   box-shadow: none;
 }
-
 
 /* footer */
 
@@ -332,39 +340,38 @@ form input {
   font-size: 20px;
 }
 
-
-@media (max-width:1199px) {
-.art2 {
-  width: 100vw;
-  display: block;
-}
-.formulario {
-  width: 100vw;
-  padding-top: 30px;
-
-}
-.ing{
-  width: 33%;
-}
-.ingresa{
-  margin-bottom: 20px;
-}
-#nombre{
-  margin-top: 20px;
-}
-#send-button{
-  width: 30%;
-  margin-top: 10px;
-}
+@media (max-width: 1199px) {
+  .art2 {
+    width: 100vw;
+    display: block;
+  }
+  .formulario {
+    width: 100vw;
+    padding-top: 30px;
+  }
+  .ing {
+    width: 33%;
+  }
+  .ingresa {
+    margin-bottom: 20px;
+  }
+  #nombre {
+    margin-top: 20px;
+  }
+  #send-button {
+    width: 30%;
+    margin-top: 10px;
+  }
 }
 
-@media (max-width:990px) {
-  .art2{
+@media (max-width: 990px) {
+  .art2 {
     height: 90vh;
   }
 }
 
-
-@media (min-width: 576px){
-.form-inline .form-control {
-  width: 50%;}}
+@media (min-width: 576px) {
+  .form-inline .form-control {
+    width: 50%;
+  }
+}

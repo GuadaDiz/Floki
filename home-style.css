@@ -30,7 +30,7 @@ header marquee {
 .shoppingcart:hover {
   color: #cfe3e3;
 }
-.logo-mininav{
+.logo-mininav {
   overflow: hidden;
 }
 /* header: logo */
@@ -42,7 +42,7 @@ header marquee {
   display: inline-block;
   float: left;
 }
-.logoo-mobile{
+.logoo-mobile {
   margin: 0;
   height: 80px;
   text-align: center;
@@ -62,14 +62,14 @@ header marquee {
 
 .search button {
   border: none;
-  color: #0D4659;
+  color: #0d4659;
 }
 .search button:hover {
-  background-color: #0D4659;
+  background-color: #0d4659;
   color: #fff;
 }
 .search button:active {
-  background-color: #0D4659;
+  background-color: #0d4659;
   color: #fff;
 }
 
@@ -87,14 +87,14 @@ header marquee {
   padding-top: 12px;
   float: right;
   text-transform: uppercase;
-  color: #0D4659;
+  color: #0d4659;
 }
 
 .login-signin {
   white-space: nowrap;
 }
 /*Only Mobile*/
-.row{
+.row {
   width: 100%;
 }
 .onlymobile {
@@ -110,30 +110,33 @@ header marquee {
 }
 
 .menubtn {
-  background-color: #0D4659;
-  border: #0D4659;
+  background-color: #0d4659;
+  border: #0d4659;
   text-align: left;
+  color: white;
 }
-.menubtn:hover{
-  background-color: #98DAE0;
-  border: #98DAE0;
+.menubtn:hover {
+  background-color: #98dae0;
+  border: #98dae0;
 }
 
 .logo-onlymobile {
   text-align: center;
 }
 
-.menu-onlymobile ul{
+.menu-onlymobile ul {
   flex-direction: row-reverse;
   text-align: right;
   padding-right: 30px;
   margin-top: 10px;
-  color: #0D4659;
+  color: #0d4659;
 }
-.search-onlymobile, .shoppingcart-onlymobile {
-width: 25%;
+.search-onlymobile,
+.shoppingcart-onlymobile {
+  width: 25%;
   display: inline-block;
 }
+
 /* main navbar */
 .navbar ul {
   width: 100%;
@@ -316,6 +319,8 @@ width: 25%;
   font-size: 20px;
 }
 
-@media (min-width: 576px){
-.form-inline .form-control {
-  width: 50%;}}
+@media (min-width: 576px) {
+  .form-inline .form-control {
+    width: 50%;
+  }
+}

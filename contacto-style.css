@@ -113,6 +113,7 @@ header marquee {
   background-color: #0D4659;
   border: #0D4659;
   text-align: left;
+  color:white;
 }
 .menubtn:hover{
   background-color: #98DAE0;
@@ -133,6 +134,10 @@ header marquee {
 .search-onlymobile, .shoppingcart-onlymobile {
 width: 25%;
   display: inline-block;
+}
+
+.nav-item-small {
+  font-size: 12px;
 }
 /* main navbar */
 .navbar ul {

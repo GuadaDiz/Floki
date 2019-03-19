@@ -1,158 +1,234 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<!--Google-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lusitana" rel="stylesheet">
-<!--FontAwesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<!--Floki's Stylesheets-->
-    <link rel="stylesheet" href="login-style.css">
-    <title> Login </title>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!--Google-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lusitana"
+      rel="stylesheet"
+    />
+    <!--FontAwesome-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <!--Floki's Stylesheets-->
+    <link rel="stylesheet" href="login-style.css" />
+    <title>Login</title>
   </head>
   <body>
-<!--HEADER-->
-<header>
-  <marquee
-    class="promocion d- d-none d-sm-flex"
-    behavior="scroll"
-    direction="left"
-    >Registrate y obtené 15% off en tu primera compra  • Envíos gratis en
-    compras superiores a $1000 • Llevá 3 o mas unidades del mismo producto
-    con 20% off •
-  </marquee>
-  <div class="logo-mininav">
-    <div class="header-logo d-none d-sm-none d-md-none d-lg-block">
-      <a href="#home"><img src="images/logo2.png" alt="" height="80px"/></a>
-    </div>
-    <div class="search text-right">
-      <form class="d-none d-sm-none d-md-none d-lg-block form-inline my-2 my-lg-0">
-      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-      </form>
-    </div>
-    <div class="nav1">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-search-logo-nav">
-          <ul class="text-right menu navbar-nav d-none d-lg-flex">
-            <li class="login-signin"><a class="nav-link" href="login.html">Login</a></li>
-            <li class="login-signin"><a class="nav-link" href="registrate.html">Sign-in</a></li>
-            <li class="shoppingcart"><a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
-          </ul>
+    <!--HEADER-->
+    <header>
+      <marquee
+        class="promocion d- d-none d-sm-flex"
+        behavior="scroll"
+        direction="left"
+        >Registrate y obtené 15% off en tu primera compra • Envíos gratis en
+        compras superiores a $1000 • Llevá 3 o mas unidades del mismo producto
+        con 20% off •
+      </marquee>
+      <div class="logo-mininav">
+        <div class="header-logo d-none d-sm-none d-md-none d-lg-block">
+          <a href="#home"><img src="images/logo2.png" alt="" height="80px"/></a>
         </div>
-      </nav>
-    </div>
-<!--OnlyMobile-->
-  <div class="row">
-    <article class="onlymobile btn-onlymobile col-lg-4 col-md-4 d-sm-block d-md-block d-lg-none text-left">
-      <button class="text-left menubtn btn btn-success d-lg-none" type="button" name="button"><i class="fas fa-bars"></i> </button>
-    </article>
-    <article class="onlymobile logo-onlymobile col-lg-4 col-md-4 d-sm-block d-md-block d-lg-none">
-      <img src="images/logo2.png" alt="Logo-Floki" class="logotipo" height="60px">
-    </article>
-    <article class="onlymobile menu-onlymobile col-lg-4 col-md-4 d-sm-block d-md-block d-lg-none">
-      <ul class="menu navbar-nav">
-        <li class="shoppingcart-onlymobile"><a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
-        <li class="search-onlymobile"><a class="nav-link" href="#"><i class="fas fa-search"></i></a></li>
-      </ul>
-    </article>
-  </div>
-</div>
-
-  <div class="main-navbar">
-    <nav class="navbar navbar-expand-lg ">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Shop
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">living</a>
-              <a class="dropdown-item" href="#">comedor</a>
-              <a class="dropdown-item" href="#">cocina</a>
-              <a class="dropdown-item" href="#">habitacion</a>
-              <a class="dropdown-item" href="#">baño</a>
-              <a class="dropdown-item" href="#">escritorio</a>
+        <div class="search text-right">
+          <form
+            class="d-none d-sm-none d-md-none d-lg-block form-inline my-2 my-lg-0"
+          >
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn  my-2 my-sm-0" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <div class="nav1">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-search-logo-nav">
+              <ul class="text-right menu navbar-nav d-none d-lg-flex">
+                <li class="login-signin">
+                  <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="login-signin">
+                  <a class="nav-link" href="registrate.html">Sign-in</a>
+                </li>
+                <li class="shoppingcart">
+                  <a class="nav-link" href="#"
+                    ><i class="fas fa-shopping-cart"></i
+                  ></a>
+                </li>
+              </ul>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Inspiración</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sobre nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">Contacto</a>
-          </li>
-        </ul>
+          </nav>
+        </div>
+        <!--OnlyMobile-->
+        <div class="row">
+          <article
+            class="onlymobile btn-onlymobile col-lg-4 col-md-4 d-sm-block d-md-block d-lg-none text-left"
+          >
+            <button
+              class="text-left menubtn btn d-lg-none navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              type="button"
+              name="button"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </article>
+          <article
+            class="onlymobile logo-onlymobile col-lg-4 col-md-4 d-sm-block d-md-block d-lg-none"
+          >
+            <img
+              src="images/logo2.png"
+              alt="Logo-Floki"
+              class="logotipo"
+              height="60px"
+            />
+          </article>
+          <article
+            class="onlymobile menu-onlymobile col-lg-4 col-md-4 d-sm-block d-md-block d-lg-none"
+          >
+            <ul class="menu navbar-nav">
+              <li class="shoppingcart-onlymobile">
+                <a class="nav-link" href="#"
+                  ><i class="fas fa-shopping-cart"></i
+                ></a>
+              </li>
+              <li class="search-onlymobile">
+                <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+              </li>
+            </ul>
+          </article>
+        </div>
       </div>
-    </nav>
-  </div>
-</header>
 
-<!--SECTION-->
+      <div class="main-navbar">
+        <nav class="navbar navbar-expand-lg ">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#shop"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Shop
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">living</a>
+                  <a class="dropdown-item" href="#">comedor</a>
+                  <a class="dropdown-item" href="#">cocina</a>
+                  <a class="dropdown-item" href="#">habitacion</a>
+                  <a class="dropdown-item" href="#">baño</a>
+                  <a class="dropdown-item" href="#">escritorio</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#inspiracion">Inspiración</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#nosotros">Sobre nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!--SECTION-->
     <section class="section">
       <div class="login">
-<!--Imagen-->
+        <!--Imagen-->
         <article class="art1 d-none d-sm-none d-md-none d-lg-none d-xl-block">
-            <img src="images/home-office.jpg" alt="living" width="100%" height="903.188px">
+          <img
+            src="images/home-office.jpg"
+            alt="living"
+            width="100%"
+            height="903.188px"
+          />
         </article>
-<!--Form-->
+        <!--Form-->
         <article class="art2">
           <form class="formulario" action="index.html" method="post">
-            <p class="ingresa">
-            ¡Ingresá!
-          </p>
-          <div class="ingresarcon">
-            <article class="ing">
-              <i class="fab fa-google-plus-g"></i>
-            </article>
-            <article class="ing">
-              <i class="fab fa-facebook-f"></i>
-            </article>
-            <article class="ing">
-              <i class="fab fa-twitter"></i>
-            </article>
-          </div>
-          <div class="o-wrap">
-            <hr>
-            <i class="far fa-circle"></i>
-          </div>
-          <p>
-            <input id="email" type="email" name="email" value="" placeholder="Email" required>
-          </p>
-          <p>
-            <input id="contraseña" type="password" name="contraseña" value="" placeholder="Contraseña" required>
-          </p>
-          <p>
-            <input class="tyc" type="checkbox" name="" value="novedades">
-            <label for="t&c">Recordarme</label>
-          </p>
-          <p>
-            <button id="send-button" type="submit" name="button">
-            <i class="far fa-paper-plane"></i>  Enviar
-            </button>
-          </p>
-        </form>
+            <p class="ingresa">
+              ¡Ingresá!
+            </p>
+            <div class="ingresarcon">
+              <article class="ing">
+                <i class="fab fa-google-plus-g"></i>
+              </article>
+              <article class="ing">
+                <i class="fab fa-facebook-f"></i>
+              </article>
+              <article class="ing">
+                <i class="fab fa-twitter"></i>
+              </article>
+            </div>
+            <div class="o-wrap">
+              <hr />
+              <i class="far fa-circle"></i>
+            </div>
+            <p>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                value=""
+                placeholder="Email"
+                required
+              />
+            </p>
+            <p>
+              <input
+                id="contraseña"
+                type="password"
+                name="contraseña"
+                value=""
+                placeholder="Contraseña"
+                required
+              />
+            </p>
+            <p>
+              <input class="tyc" type="checkbox" name="" value="novedades" />
+              <label for="t&c">Recordarme</label>
+            </p>
+            <p>
+              <button id="send-button" type="submit" name="button">
+                <i class="far fa-paper-plane"></i> Enviar
+              </button>
+            </p>
+          </form>
         </article>
-
-        </div>
-
-
+      </div>
     </section>
 
     <!-- FOOTER -->
@@ -203,18 +279,21 @@
       </div>
     </footer>
 
-
-
-
-
-
-
-
-
-
-<!--SCRIPTS-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--SCRIPTS-->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
