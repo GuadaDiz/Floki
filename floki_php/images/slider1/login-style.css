@@ -1,0 +1,379 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* header */
+
+header {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+header marquee {
+  background-color: #0d4659;
+  color: #ffffff;
+  font-size: 14px;
+  height: 30px;
+  padding: 5px;
+}
+
+/* header : user navbar */
+.search-logo-nav {
+  overflow: hidden;
+  height: 10vh;
+  color: #0d4659;
+  text-transform: uppercase;
+  padding-top: 30px;
+}
+.shoppingcart:hover {
+  color: #cfe3e3;
+}
+.logo-mininav {
+  overflow: hidden;
+}
+/* header: logo */
+.header-logo {
+  width: 55%;
+  margin: 0;
+  height: 80px;
+  text-align: right;
+  display: inline-block;
+  float: left;
+}
+.logoo-mobile {
+  margin: 0;
+  height: 80px;
+  text-align: center;
+  display: inline-block;
+}
+.header-logo img {
+  width: auto;
+}
+
+.search {
+  width: 20%;
+  float: left;
+  text-align: right;
+  padding-top: 20px;
+  margin-left: 5%;
+}
+
+.search button {
+  border: none;
+  color: #0d4659;
+}
+.search button:hover {
+  background-color: #0d4659;
+  color: #fff;
+}
+.search button:active {
+  background-color: #0d4659;
+  color: #fff;
+}
+
+.search input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0px;
+  text-align: right;
+}
+.nav1 {
+  width: 20%;
+  text-align: right;
+  padding-right: 30px;
+  padding-top: 12px;
+  float: right;
+  text-transform: uppercase;
+  color: #0d4659;
+}
+
+.login-signin {
+  white-space: nowrap;
+}
+/*Only Mobile*/
+.row {
+  width: 100%;
+}
+.onlymobile {
+  width: 33.33%;
+  float: left;
+  height: 60px;
+}
+
+.btn-onlymobile {
+  padding-left: 50px;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.menubtn {
+  background-color: #0d4659;
+  border: #0d4659;
+  text-align: left;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.menubtn:hover {
+  background-color: #98dae0;
+  border: #98dae0;
+}
+
+.logo-onlymobile {
+  text-align: center;
+}
+
+.menu-onlymobile ul {
+  flex-direction: row-reverse;
+  text-align: right;
+  padding-right: 30px;
+  margin-top: 10px;
+  color: #0d4659;
+}
+.search-onlymobile,
+.shoppingcart-onlymobile {
+  width: 25%;
+  display: inline-block;
+}
+
+/* main navbar */
+.navbar ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.navbar .nav-item {
+  color: #0d4659;
+  text-transform: uppercase;
+}
+.navbar a:hover {
+  color: #98dae0;
+}
+.navbar .btn-menu {
+  border: none;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  color: #ffffff;
+  background-color: #0d4659;
+  padding: 15px;
+  font-size: 15px;
+  margin: 0 auto;
+}
+.btn-menu:hover {
+  background-color: #cfe3e3;
+  color: #0d4659;
+  text-decoration: none;
+}
+
+/* SECTION*/
+.section {
+  background-image: image(Images/fondomarmol.jpg);
+  overflow: hidden;
+  height: 80vh;
+  width: 100vw;
+}
+
+/*Imagen*/
+.art1 {
+  float: left;
+  width: 50vw;
+  height: 80vh;
+  float: left;
+  display: inline-block;
+}
+
+/*Formulario*/
+.art2 {
+  float: left;
+  height: 80vh;
+  display: inline-block;
+}
+.ingresarcon {
+  height: 5vh;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 4px;
+  border-bottom: none;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  justify-content: center;
+}
+.ing {
+  width: 14vw;
+  float: left;
+}
+
+.fab {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+.fab:hover {
+  color: #0d4659;
+}
+.o-wrap {
+  position: relative;
+  margin-bottom: 50px;
+}
+hr {
+  border-color: #fff;
+  border-width: 2px;
+  width: 30%;
+}
+.fa-circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 0px 10px;
+  background-color: #cfe3e3;
+  color: #fff;
+}
+.formulario {
+  background-color: #cfe3e3;
+  border-width: 2px;
+  border-color: #444;
+  width: 50vw;
+  height: 80vh;
+  padding: 40px;
+  position: absolute;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  display: inline-block;
+}
+
+form label {
+  color: #0d4659;
+  text-transform: capitalize;
+}
+
+form input {
+  color: #98dae0;
+  text-align: center;
+}
+.ingresa {
+  font-family: 'Lusitana', serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #0d4659;
+  letter-spacing: 2px;
+}
+#nombre,
+#apellido,
+#email,
+#contraseña {
+  box-sizing: border-box;
+  width: 60%;
+  height: 5vh;
+  color: #0d4659;
+  font-size: 0.75em;
+  background-color: white;
+  border: 2px solid white;
+  padding: 4px;
+  margin-top: 3px;
+  text-transform: uppercase;
+}
+
+#nombre:hover,
+#apellido:hover,
+#email:hover,
+#contraseña:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#send-button {
+  box-sizing: border-box;
+  width: 25%;
+  height: 40px;
+  color: #0d4659;
+  font-size: 1em;
+  text-transform: uppercase;
+  background-color: white;
+  border: none;
+  border-radius: 0px;
+  margin-top: 60px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+#send-button:hover {
+  color: white;
+  background-color: #0d4659;
+}
+#sen-button:focus {
+  box-shadow: none;
+}
+
+/* footer */
+
+.main-footer {
+  background-color: #0d4659;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 30px;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-size: 12px;
+}
+.main-footer a {
+  text-decoration: none;
+}
+.dropdown-item {
+  color: #0d4659;
+}
+.footer-social h3 {
+  font-size: 15px;
+}
+.footer-shop li :hover,
+.footer-list li :hover,
+.footer-social a :hover {
+  color: #98dae0;
+}
+.footer-social a {
+  font-size: 35px;
+}
+.main-footer li {
+  list-style-type: none;
+}
+.footer-shop .nav-link {
+  font-size: 20px;
+}
+
+@media (max-width: 1199px) {
+  .art2 {
+    width: 100vw;
+    display: block;
+  }
+  .formulario {
+    width: 100vw;
+    padding-top: 30px;
+  }
+  .ing {
+    width: 33%;
+  }
+  .ingresa {
+    margin-bottom: 20px;
+  }
+  #nombre {
+    margin-top: 20px;
+  }
+  #send-button {
+    width: 30%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 990px) {
+  .art2 {
+    height: 90vh;
+  }
+}
+
+@media (min-width: 576px) {
+  .form-inline .form-control {
+    width: 50%;
+  }
+}
