@@ -10,7 +10,7 @@
     <!--HEADER-->
     <?php include("header.php") ?>
     <!--SECTION-->
-    <section class="section">
+    <section class="section-registro">
         <div class="register">
             <!--Imagen-->
             <article class="art1 d-none d-lg-block">
