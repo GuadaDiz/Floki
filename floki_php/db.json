@@ -1,0 +1,12 @@
+{
+    "usuarios": [
+        {
+            "id": 0,
+            "nombre": "maria",
+            "apellido": "iocca",
+            "email": "beluiocca@gmail.com",
+            "pass": "$2y$10$wNFd2y8aVx04tCRNqNQ7.Ov43L2pTrUxekJkhQEh8qv16GJlSzgsO"
+        }
+       
+    ]
+}
