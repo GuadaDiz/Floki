@@ -36,7 +36,7 @@
                 </li>
               </ul>
             </div>
-  
+
           </nav>
         </div>
         <div class="header-logo">
@@ -70,12 +70,12 @@
                     Shop
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">living</a>
-                    <a class="dropdown-item" href="#">comedor</a>
-                    <a class="dropdown-item" href="#">cocina</a>
-                    <a class="dropdown-item" href="#">habitacion</a>
-                    <a class="dropdown-item" href="#">baño</a>
-                    <a class="dropdown-item" href="#">escritorio</a>
+                    <a class="dropdown-item" href="shop-living.php">living</a>
+                    <a class="dropdown-item" href="shop-comedor.php">comedor</a>
+                    <a class="dropdown-item" href="shop-cocina.php">cocina</a>
+                    <a class="dropdown-item" href="shop-dormitorio.php">dormitorio</a>
+                    <a class="dropdown-item" href="shop-bath.php">baño</a>
+                    <a class="dropdown-item" href="shop-oficina.php">home office</a>
                   </div>
                 </li>
                 <li class="nav-item">

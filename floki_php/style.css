@@ -8,6 +8,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+ul, ol{
+  list-style-type: none;
+  padding: none;
+}
 
 /* HEADER */
 header {
@@ -302,7 +306,12 @@ header marquee {
   width: 50vw;
   height: 80vh;
   float: left;
+  display: inline-block;
 }
+.section-login .art1 img{
+  object-fit: cover;
+}
+
 
 /*Formulario*/
 .section-login .art2 {
@@ -445,6 +454,11 @@ header marquee {
   display: inline-block;
 }
 
+.register .art1 img{
+  object-fit: cover;
+}
+
+
 .register img {
   max-height: 100%;
 }
@@ -582,6 +596,9 @@ header marquee {
   float: left;
   display: inline-block;
 }
+.section-contacto .art1 img{
+  object-fit: cover;
+}
 
 /*Formulario*/
 .section-contacto .art2 {
@@ -657,4 +674,47 @@ header marquee {
   .section-contacto #send-button {
     margin-top: 10px;
   }
+}
+
+
+/* SHOP */
+
+/* banner */
+.banner-shop{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.banner{
+  justify-content: center;
+  width: 80%;
+  object-fit: scale-down;
+}
+
+
+.shop-articulo{
+padding: 20px;
+}
+.shop-articulo img {
+  width: 100%;
+  object-fit: scale-down;
+  padding: 10px 10px;
+}
+
+.shop-articulo p {
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: #0D4659;
+  text-transform: uppercase;
+}
+
+
+}
+@media (max-width: 768px){
+
+
+}
+@media (max-width: 992px){
+
 }
