@@ -1,3 +1,8 @@
+<?php require("funciones.php");
+
+session_start();
+?>
+
 <html lang="en" dir="ltr">
 
 <head>

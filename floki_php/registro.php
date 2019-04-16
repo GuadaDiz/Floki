@@ -1,28 +1,21 @@
 <?php
-
 require("funciones.php");
-
-
-
 if ($_POST) {
     // validar datos del form
-    $errores = validar($_POST);
+    $errores = validarRegistro($_POST);
 
     if (empty($errores)) {
         $usuario = armarUsuario($_POST);
         guardarUsuario($usuario);
-        header("Location:home.php");
+        header("Location:login.php");
     }
 }
 ?>
-
 <html lang="en" dir="ltr">
-
 <head>
-    <?php include("head.php") ?>
+    <?php include("head.php")?>
     <title>¡Registrate!</title>
 </head>
-
 <body>
     <!--HEADER-->
     <?php include("header.php") ?>

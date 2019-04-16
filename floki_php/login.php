@@ -1,3 +1,25 @@
+<?php
+require("funciones.php");
+
+if ($_POST) {
+    // validar datos del form
+    $errores = validarLogin($_POST);
+
+    if (empty($errores)) {
+        if(isset($_POST["recordarme"]) && $_POST["recordarme"]!=""){
+            setcookie("user", $_POST["email"], time()+ 60);
+        }
+        loguearUsuario($_POST);
+        // header("Location:home.php");
+    }
+}
+var_dump($_COOKIE);
+session_start();
+var_dump($_SESSION);
+
+?>
+
+
 <html lang="en" dir="ltr">
 
 <head>
@@ -13,7 +35,7 @@
         <div class="login">
             <!--Imagen-->
             <article class="art1 d-none d-lg-block">
-                <img src="images/home-office.jpg" alt="living"  />
+                <img src="images/home-office.jpg" alt="living" />
             </article>
             <!--Form-->
             <article class="art2">
@@ -37,12 +59,23 @@
                         <i class="far fa-circle"></i>
                     </div>
                     <p>
-                        <input class="userform" id="email" type="email" name="email" placeholder="Email" required />
+                        <?php if (isset($errores["email"])) : ?>
+                            <input class="userform" id="email" type="email" name="email" placeholder="<?= $errores["email"] ?>" />
+                        <?php elseif (isset($_POST["email"])) : ?>
+                            <input class="userform" id="email" type="email" name="email" placeholder="<?= $_POST["email"] ?>" />
+                        <?php else : ?>
+                            <input class="userform" id="email" type="email" name="email" placeholder="Email" />
+                        <?php endif ?>
                     </p>
                     <p>
-                        <input class="userform" id="contraseña" type="password" name="contraseña" placeholder="Contraseña" required />
+                        <?php if (isset($errores["pass"])) : ?>
+                            <input class="userform" id="contraseña" type="password" name="pass" placeholder="<?= $errores["pass"] ?>" />
+                        <?php else : ?>
+                            <input class="userform" id="contraseña" type="password" name="pass" placeholder="contraseña" />
+                        <?php endif ?>
                     </p>
                     <p>
+                    
                         <input class="tyc" type="checkbox" name="recordarme" />
                         <label for="t&c">Recordarme</label>
                     </p>

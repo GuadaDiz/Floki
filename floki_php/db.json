@@ -2,11 +2,17 @@
     "usuarios": [
         {
             "id": 0,
-            "nombre": "maria",
-            "apellido": "iocca",
+            "nombre": "guada",
+            "apellido": "diz",
+            "email": "guadadiz@gmail.com",
+            "pass": "$2y$10$Wf0OCZuWr2nWAZ3GEtQ1BerXj96MUdh4okrtQB0QFFZtrEPHbT\/PO"
+        },
+        {
+            "id": 1,
+            "nombre": "Mar\u00eda",
+            "apellido": "Iocca",
             "email": "beluiocca@gmail.com",
-            "pass": "$2y$10$wNFd2y8aVx04tCRNqNQ7.Ov43L2pTrUxekJkhQEh8qv16GJlSzgsO"
+            "pass": "$2y$10$lYeMcIVE1FuVRqh7IOtYueaene\/MlXKTdnmMUEYIeuP3AmpLb1swq"
         }
-       
     ]
 }
