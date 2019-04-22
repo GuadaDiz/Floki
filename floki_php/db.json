@@ -13,6 +13,13 @@
             "apellido": "Iocca",
             "email": "beluiocca@gmail.com",
             "pass": "$2y$10$lYeMcIVE1FuVRqh7IOtYueaene\/MlXKTdnmMUEYIeuP3AmpLb1swq"
+        },
+        {
+            "id": 2,
+            "nombre": "sol",
+            "apellido": "black",
+            "email": "solbeor@hotmail.com",
+            "pass": "$2y$10$PwNveMvudy.Ifzg6wVisKeSw\/.2t8EDuSISrHtSP7ld3xKSetk70K"
         }
     ]
 }

@@ -10,12 +10,10 @@ if ($_POST) {
             setcookie("user", $_POST["email"], time()+ 60);
         }
         loguearUsuario($_POST);
-        // header("Location:home.php");
+        header("Location:home.php");
     }
 }
-var_dump($_COOKIE);
-session_start();
-var_dump($_SESSION);
+
 
 ?>
 
@@ -75,12 +73,12 @@ var_dump($_SESSION);
                         <?php endif ?>
                     </p>
                     <p>
-                    
+
                         <input class="tyc" type="checkbox" name="recordarme" />
                         <label for="t&c">Recordarme</label>
                     </p>
                     <p>
-                        <button id="send-button" type="submit" name="button">
+                        <button id="send-button" type="submit" name="button" >
                             <i class="far fa-paper-plane"></i> Enviar
                         </button>
                     </p>

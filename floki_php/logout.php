@@ -2,7 +2,8 @@
 
 <?php include("productos.php");
 require("funciones.php");
-session_start();;
+logOut();
+
 ?>?>
 
 <head>
@@ -21,24 +22,12 @@ session_start();;
 <section class="container-fluid">
 <div class="row">
 
-  <?php foreach($productos as $key=>$value): ?>
-    <?php if (($_GET["codigo"]) == $value["codigo"]): ?>
-
-    <article class="col-lg-3 col-md-4 col-sm-6 col-xs-6 shop-articulo">
-      <img  src=<?php echo $value["url-fotos"][0]; ?> alt="<?php echo $value["titulo"]; ?>">
-      <p><?php echo $value["titulo"]; ?></p>
-      <p><?php echo $value["precio"]; ?></p>
-    </article>
-
-      <?php endif; ?>
-    <?php endforeach; ?>
+  <p>Su sesión ha sido cerrada.</p>
 
 
 </div>
 </section>
 
-<div class="banner-shop"><img class="banner" src="images/productos/banner-shop-floki.jpg" alt="Envio gratis">
-</div>
 
 
     </div>

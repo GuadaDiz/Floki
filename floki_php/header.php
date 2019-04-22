@@ -15,7 +15,9 @@
                     <i class="fas fa-shopping-cart"></i>
                   </a>
                 </div>
-            <button
+<?php if (isset($_COOKIE["user"]) || isset($_SESSION["email"])): ?>
+
+  <button
               class="navbar-toggler btn "
               type="button"
               data-toggle="collapse"
@@ -24,21 +26,49 @@
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <i class="far fa-user-circle"></i>
-            </button>
+              <i class="fas fa-user-circle"></i>
+  </button>
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="login.php">Log in</a>
+                  <a class="nav-link" href="perfil.php">Mi perfil</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="registro.php">Sign in</a>
+                  <a class="nav-link" href="logout.php" >Log out</a>
                 </li>
               </ul>
             </div>
 
+<?php else: ?>
+
+<button
+  class="navbar-toggler btn "
+  type="button"
+  data-toggle="collapse"
+  data-target="#navbarSupportedContent"
+  aria-controls="navbarSupportedContent"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
+>
+  <i class="far fa-user-circle"></i>
+    </button>
+
+<div class="collapse navbar-collapse " id="navbarSupportedContent">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="login.php">Log in</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="registro.php">Sign in</a>
+    </li>
+  </ul>
+</div>
+
+<?php endif; ?>
+
           </nav>
         </div>
+
         <div class="header-logo">
           <a href="home.php"><img src="images/logo2.png" alt=""/></a>
         </div>
@@ -70,12 +100,12 @@
                     Shop
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="shop-living.php">living</a>
-                    <a class="dropdown-item" href="shop-comedor.php">comedor</a>
-                    <a class="dropdown-item" href="shop-cocina.php">cocina</a>
-                    <a class="dropdown-item" href="shop-dormitorio.php">dormitorio</a>
-                    <a class="dropdown-item" href="shop-bath.php">baño</a>
-                    <a class="dropdown-item" href="shop-oficina.php">home office</a>
+                    <a class="dropdown-item" href="shop.php?categoria=living">living</a>
+                    <a class="dropdown-item" href="shop.php?categoria=comedor">comedor</a>
+                    <a class="dropdown-item" href="shop.php?categoria=cocina">cocina</a>
+                    <a class="dropdown-item" href="shop.php?categoria=dormitorio">dormitorio</a>
+                    <a class="dropdown-item" href="shop.php?categoria=bath">baño</a>
+                    <a class="dropdown-item" href="shop.php?categoria=oficina">home office</a>
                   </div>
                 </li>
                 <li class="nav-item">

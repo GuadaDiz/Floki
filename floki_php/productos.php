@@ -1,4 +1,6 @@
 <?php
+
+
 $productos = [
 0 => [
   "codigo" => 0001,
@@ -71,6 +73,8 @@ $productos = [
   "stock" => 40
 ],
 
-]
+];
+
+
 
  ?>

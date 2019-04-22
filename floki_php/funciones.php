@@ -8,7 +8,7 @@ function comprobarUsuario($email)
     } else {
         $usuarios = file_get_contents("db.json");
     }
-   
+
     if($usuarios == ""){
         return null;
     }
@@ -150,13 +150,13 @@ function validarLogin($datos)
 
 
     $usuario = comprobarUsuario($datos["email"]);
-    
+
     if(empty($datos["pass"])){
         $errores["pass"] = "Por favor ingrese su contraseña";
     }else if(!password_verify($datos["pass"], $usuario["pass"])){
-        $errores["pass"] = "La contraseña no es correcta";  
-    } 
-    
+        $errores["pass"] = "La contraseña no es correcta";
+    }
+
     return $errores;
 }
 
@@ -166,4 +166,11 @@ function loguearUsuario($user){
     $_SESSION["email"]= $usuario["email"];
     $_SESSION["nombre"] = $usuario["nombre"];
     $_SESSION["apellido"] = $usuario["apellido"];
+}
+
+function logOut(){
+  session_start();
+  session_destroy();
+  setcookie("user", "", -1);
+  header("Location: home.php");
 }

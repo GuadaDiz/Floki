@@ -1,6 +1,9 @@
 <html lang="en" dir="ltr">
 
-<?php include("productos.php") ?>
+<?php include("productos.php");
+require("funciones.php");
+session_start();;
+?>?>
 
 <head>
     <?php include("head.php") ?>
@@ -19,16 +22,29 @@
 <div class="row">
 
   <?php foreach($productos as $key=>$value): ?>
-    <?php if ($_GET["categoria"] == $value["categoria"]): ?>
+    <?php if (isset($_GET["categoria"]) && $_GET["categoria"] === $value["categoria"]): ?>
       <?php $producto = $value["codigo"]; ?>
     <article class="col-lg-3 col-md-4 col-sm-6 col-xs-6 shop-articulo">
       <a href=<?php echo "producto.php?codigo=".$producto  ?>><img  src=<?php echo $value["url-fotos"][0]; ?> alt="<?php echo $value["titulo"]; ?>"></a>
 
       <a href=<?php echo "producto.php?codigo=".$producto  ?>>
         <p><?php echo $value["titulo"]; ?></p></a>
-        
+
       <p><?php echo $value["precio"]; ?></p>
     </article>
+
+  <?php elseif (!isset($_GET["categoria"])): ?>
+  <?php $producto = $value["codigo"]; ?>
+<article class="col-lg-3 col-md-4 col-sm-6 col-xs-6 shop-articulo">
+  <a href=<?php echo "producto.php?codigo=".$producto  ?>><img  src=<?php echo $value["url-fotos"][0]; ?> alt="<?php echo $value["titulo"]; ?>"></a>
+
+  <a href=<?php echo "producto.php?codigo=".$producto  ?>>
+    <p><?php echo $value["titulo"]; ?></p></a>
+
+  <p><?php echo $value["precio"]; ?></p>
+</article>
+
+
       <?php endif; ?>
     <?php endforeach; ?>
 
