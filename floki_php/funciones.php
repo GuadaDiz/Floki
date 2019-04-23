@@ -51,7 +51,7 @@ function validarRegistro($datos)
         $errores["email"] = "Por favor ingrese su email";
     } else if (filter_var($datosFinales["email"], FILTER_VALIDATE_EMAIL) == false) {
         $errores["email"] = "Por favor use el formato: usuario@ejemplo.com";
-    } elseif (comprobarUsuario($datosFinales["email"])) {
+    } elseif (existeElUsuario($datosFinales["email"])) {
         $errores["email"] = "Ya existe un usuario con este email";
     }
 

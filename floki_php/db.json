@@ -20,6 +20,13 @@
             "apellido": "black",
             "email": "solbeor@hotmail.com",
             "pass": "$2y$10$PwNveMvudy.Ifzg6wVisKeSw\/.2t8EDuSISrHtSP7ld3xKSetk70K"
+        },
+        {
+            "id": 3,
+            "nombre": "maria belen",
+            "apellido": "iocca",
+            "email": "belen@digitalhouse.com",
+            "pass": "$2y$10$2oyywVo7A1WD7zQLzZWVDejL.iQT08wp605tA.M2oI5\/vGjOAi\/6O"
         }
     ]
 }
