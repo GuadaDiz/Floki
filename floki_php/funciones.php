@@ -37,13 +37,13 @@ function validarRegistro($datos)
 
     if (empty($datosFinales["nombre"])) {
         $errores["nombre"] = "Por favor ingrese su nombre";
-    } elseif (!preg_match('/^[\p{L}-]*$/u', ($datosFinales["nombre"]))) {
+    } elseif (!preg_match('/^(\s)*[\p{L}-]+((\s)?((\'|\-)?([\p{L}-])+))*(\s)*$/u', ($datosFinales["nombre"]))) {
         $errores["nombre"] = "El campo nombre debe contener solo letras";
     }
 
     if (empty($datosFinales["apellido"])) {
         $errores["apellido"] = "Por favor ingrese su apellido ";
-    } elseif (!preg_match('/^[\p{L}-]*$/u', ($datosFinales["apellido"]))) {
+    } elseif (!preg_match('/^(\s)*[\p{L}-]+((\s)?((\'|\-)?([\p{L}-])+))*(\s)*$/u', ($datosFinales["apellido"]))) {
         $errores["apellido"] = "El campo apellido debe contener solo letras";
     }
 
