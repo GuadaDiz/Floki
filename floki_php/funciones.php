@@ -1,29 +1,32 @@
 <?php
 
+session_start();
+
 function comprobarUsuario($email)
 {
 
-    if(!file_exists("db.json")){
+    if (!file_exists("db.json")) {
         $usuarios = "";
     } else {
         $usuarios = file_get_contents("db.json");
     }
 
-    if($usuarios == ""){
+    if ($usuarios == "") {
         return null;
     }
 
     $array = json_decode($usuarios, true);
-    foreach($array["usuarios"] as $usuario){
-        if($email== $usuario["email"]){
+    foreach ($array["usuarios"] as $usuario) {
+        if ($email == $usuario["email"]) {
             return $usuario;
         }
     }
 
-return null;
+    return null;
 }
 
-function existeElUsuario($email){
+function existeElUsuario($email)
+{
     return comprobarUsuario($email) !== null;
 }
 
@@ -151,26 +154,27 @@ function validarLogin($datos)
 
     $usuario = comprobarUsuario($datos["email"]);
 
-    if(empty($datos["pass"])){
+    if (empty($datos["pass"])) {
         $errores["pass"] = "Por favor ingrese su contraseña";
-    }else if(!password_verify($datos["pass"], $usuario["pass"])){
+    } else if (!password_verify($datos["pass"], $usuario["pass"])) {
         $errores["pass"] = "La contraseña no es correcta";
     }
 
     return $errores;
 }
 
-function loguearUsuario($user){
+function loguearUsuario($user)
+{
     $usuario = comprobarUsuario($user["email"]);
-    session_start();
-    $_SESSION["email"]= $usuario["email"];
+    $_SESSION["email"] = $usuario["email"];
     $_SESSION["nombre"] = $usuario["nombre"];
     $_SESSION["apellido"] = $usuario["apellido"];
 }
 
-function logOut(){
-  session_start();
-  session_destroy();
-  setcookie("user", "", -1);
-  header("Location: home.php");
+function logOut()
+{
+    session_start();
+    session_destroy();
+    setcookie("user", "", -1);
+    header("Location: home.php");
 }

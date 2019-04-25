@@ -78,7 +78,7 @@ if ($_POST) {
                         <?php if (isset($errores["pass"])) : ?>
                             <input class="userform" id="contraseña lefttip" type="password" name="pass" value="" data-toggle="tooltip" data-placement="top" title="Al menos 8 caracteres, una mayúscula, una minúscula y un número." placeholder="<?= $errores["pass"] ?>" />
                         <?php elseif (isset($_POST["pass"])) : ?>
-                            <input class="userform" id="contraseña lefttip" type="password" name="pass" value="" data-toggle="tooltip" data-placement="top" title="Al menos 8 caracteres, una mayúscula, una minúscula y un número." placeholder="Las contraseñas no coinciden" />
+                            <input class="userform" id="contraseña lefttip" type="password" name="pass" value="" data-toggle="tooltip" data-placement="top" title="Al menos 8 caracteres, una mayúscula, una minúscula y un número." placeholder="Ingrese su contraseña" />
                         <?php else : ?>
                             <input class="userform tooptip-pass" id="contraseña lefttip" type="password" name="pass" value="" data-toggle="tooltip" data-placement="top" title="Al menos 8 caracteres, una mayúscula, una minúscula y un número." placeholder="Contraseña" />
                         <?php endif ?>
@@ -100,7 +100,7 @@ if ($_POST) {
                             <?php if (isset($errores["tyc"])) : ?>
                                 <input class="tyc" type="checkbox" name="tyc" value="t&c" />
                                 Estoy de acuerdo con los <a href="">términos y condiciones.</a>
-                                <div><small class="text-muted">Acepte los terminos y condiciones para continuar</small></div>
+                                <div><small class="condiciones">Acepte los terminos y condiciones para continuar</small></div>
                             <?php elseif (isset($_POST["tyc"])) : ?>
                                 <input class="tyc" type="checkbox" name="tyc" value="t&c" checked />
                                 Estoy de acuerdo con los <a href="">términos y condiciones.</a>

@@ -582,6 +582,12 @@ header marquee {
   border-radius:4px
 }
 
+ .condiciones {
+  color: white;
+  background-color: #0d4659;
+  padding: 2px 3px;
+}
+
 /* CONTACTO */
 .section-contacto {
   overflow: hidden;

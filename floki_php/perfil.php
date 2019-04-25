@@ -1,7 +1,7 @@
 <?php
 
 require("funciones.php");
-session_start();
+
 
 
 
