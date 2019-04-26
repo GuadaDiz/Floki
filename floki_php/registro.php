@@ -1,5 +1,8 @@
 <?php
 require("funciones.php");
+if(usuarioLogueado()){
+    header("Location:home.php");
+}
 if ($_POST) {
     // validar datos del form
     $errores = validarRegistro($_POST);
@@ -10,6 +13,7 @@ if ($_POST) {
         header("Location:login.php");
     }
 }
+
 ?>
 <html lang="en" dir="ltr">
 <head>

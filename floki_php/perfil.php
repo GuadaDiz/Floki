@@ -4,21 +4,26 @@ require("funciones.php");
 
 
 
+// if($_POST){
+//     actualizarUsuario($_POST);
+// }
 
-if ($_FILES) {
-    $file = null;
-    $errorAvatar = validarAvatar($_FILES);
-    if (empty($errorAvatar)) {
-        guardarAvatar($_FILES);
-    }
-}
+
+// if ($_FILES) {
+//     $file = null;
+//     $errorAvatar = validarAvatar($_FILES);
+//     if (empty($errorAvatar)) {
+//         guardarAvatar($_FILES);
+//     }
+// }
+
 ?>
 
 <html lang="en" dir="ltr">
 
 <head>
     <?php include("head.php") ?>
-    <title>FLOKI Deco & Design</title>
+    <title>Perfil</title>
 </head>
 
 <body>
@@ -45,14 +50,22 @@ if ($_FILES) {
                 <h2>perfil</h2>
                 <form action="" method="post" enctype="multipart/form-data">
                     <div>
-                        <input type="text" name="nombre" placeholder="Nombre">
+                        <?php if(isset($_SESSION["nombre"])):?>
+                            <input class="form-control" type="text" name="nombre" placeholder="<?=$_SESSION["nombre"]?>">
+                        <?php else: ?>
+                            <input class="form-control" type="text" name="nombre" placeholder="Nombre">
+                        <?php endif ?>
                     </div>
                     <div>
-                        <input type="text" name="apellido" placeholder="Apellido">
+                    <?php if(isset($_SESSION["apellido"])):?>
+                            <input class="form-control" type="text" name="apellido" placeholder="<?=$_SESSION["apellido"]?>">
+                        <?php else: ?>
+                            <input class="form-control" type="text" name="apellido" placeholder="apellido">
+                        <?php endif ?>
                     </div>
                     <div>
                         <div> <label for="cumpleaños">Cumpleaños</label></div>
-                        <input type="date" name="cumpleaños" placeholder="cumpleaños">
+                        <input class="form-control" type="date" name="cumple" placeholder="cumpleaños">
                     </div>
                     <button type="submit">Actualizar</button>
                 </form>

@@ -1,6 +1,10 @@
 <?php
 require("funciones.php");
 
+if(usuarioLogueado()){
+    header("Location:home.php");
+}
+
 if ($_POST) {
     // validar datos del form
     $errores = validarLogin($_POST);

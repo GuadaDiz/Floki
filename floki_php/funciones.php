@@ -4,7 +4,6 @@ session_start();
 
 function comprobarUsuario($email)
 {
-
     if (!file_exists("db.json")) {
         $usuarios = "";
     } else {
@@ -30,6 +29,13 @@ function existeElUsuario($email)
     return comprobarUsuario($email) !== null;
 }
 
+
+function listaDeUsuarios(){
+    $json = file_get_contents("db.json");
+    $array = json_decode($json, true);
+  
+    return $array;
+  }
 function validarRegistro($datos)
 {
     $errores = [];
@@ -112,30 +118,6 @@ function guardarUsuario($user)
     file_put_contents("db.json", $array);
 }
 
-
-// function validarAvatar($archivo)
-// {
-//     $errorAvatar = "";
-
-//     if ($archivo["avatar"]["error"] !== UPLOAD_ERR_OK) {
-//         $errorAvatar = "Hubo un error al subir la imagen";
-//     }
-
-//     $extension = pathinfo($archivo["avatar"]["name"], PATHINFO_EXTENSION);
-//     if ($extension != "jpg" && $extension != "png" && $extension != "jpeg") {
-//         $errorAvatar = "Formatos permitidos: png, jpg o jpeg.";
-//     }
-
-//     return $errorAvatar;
-// }
-
-// function guardarAvatar($archivos)
-// {
-//     $ext = pathinfo($archivos["avatar"]["name"], PATHINFO_EXTENSION);
-//     $file = "./images/img/avatar" . $_POST["nombre"] . $_POST["apellido"] . "." . $ext;
-//     move_uploaded_file($archivos["avatar"]["tmp_name"], $file);
-// }
-
 function validarLogin($datos)
 {
     $errores = [];
@@ -169,6 +151,20 @@ function loguearUsuario($user)
     $_SESSION["email"] = $usuario["email"];
     $_SESSION["nombre"] = $usuario["nombre"];
     $_SESSION["apellido"] = $usuario["apellido"];
+    $_SESSION["id"] = $usuario["id"];
+}
+
+function traerUsuarioLogueado()
+{
+    if (isset($_SESSION["email"])) {
+        return comprobarUsuario($_SESSION["email"]);
+    }
+    return false;
+}
+
+function usuarioLogueado()
+{
+    return isset($_SESSION["email"]);
 }
 
 function logOut()
@@ -178,3 +174,49 @@ function logOut()
     setcookie("user", "", -1);
     header("Location: home.php");
 }
+
+// function actualizarUsuario($user)
+// {
+//     $usuarioActualizado = [
+//         "nombre" => trim($user["nombre"]),
+//         "apellido" => trim($user["apellido"]),
+//         "cumple" => $user["cumple"]
+//     ];
+
+//     $json = file_get_contents("db.json");
+//     $array = json_decode($json, true);
+
+//     foreach($array["usuarios"] as $usuario) {
+//         if ($_SESSION["id"] == $usuario["id"]) {
+//             $usuario["nombre"] = $usuarioActualizado["nombre"];
+//             $usuario["apellido"] = $usuarioActualizado["apellido"];
+//             $usuario["cumple"] = $usuarioActualizado["cumple"];
+//         };
+//     }   
+//     $array = json_encode($array, JSON_PRETTY_PRINT);
+//     file_put_contents("db.json", $array);
+// }
+
+
+// function validarAvatar($archivo)
+// {
+//     $errorAvatar = "";
+
+//     if ($archivo["avatar"]["error"] !== UPLOAD_ERR_OK) {
+//         $errorAvatar = "Hubo un error al subir la imagen";
+//     }
+
+//     $extension = pathinfo($archivo["avatar"]["name"], PATHINFO_EXTENSION);
+//     if ($extension != "jpg" && $extension != "png" && $extension != "jpeg") {
+//         $errorAvatar = "Formatos permitidos: png, jpg o jpeg.";
+//     }
+
+//     return $errorAvatar;
+// }
+
+// function guardarAvatar($archivos)
+// {
+//     $ext = pathinfo($archivos["avatar"]["name"], PATHINFO_EXTENSION);
+//     $file = "./images/img/avatar" . $_POST["nombre"] . $_POST["apellido"] . "." . $ext;
+//     move_uploaded_file($archivos["avatar"]["tmp_name"], $file);
+// }
