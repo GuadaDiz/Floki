@@ -1,6 +1,10 @@
 <?php
 
 require("funciones.php");
+if(!usuarioLogueado()){
+    header("Location:home.php");
+}
+$usuario = traerUsuarioLogueado();
 
 
 
@@ -50,18 +54,10 @@ require("funciones.php");
                 <h2>perfil</h2>
                 <form action="" method="post" enctype="multipart/form-data">
                     <div>
-                        <?php if(isset($_SESSION["nombre"])):?>
-                            <input class="form-control" type="text" name="nombre" placeholder="<?=$_SESSION["nombre"]?>">
-                        <?php else: ?>
-                            <input class="form-control" type="text" name="nombre" placeholder="Nombre">
-                        <?php endif ?>
+                     <input class="form-control" type="text" name="nombre" placeholder="<?=$usuario["nombre"]?>"> 
                     </div>
                     <div>
-                    <?php if(isset($_SESSION["apellido"])):?>
-                            <input class="form-control" type="text" name="apellido" placeholder="<?=$_SESSION["apellido"]?>">
-                        <?php else: ?>
-                            <input class="form-control" type="text" name="apellido" placeholder="apellido">
-                        <?php endif ?>
+                         <input class="form-control" type="text" name="apellido" placeholder="<?=$usuario["apellido"]?>">
                     </div>
                     <div>
                         <div> <label for="cumpleaños">Cumpleaños</label></div>

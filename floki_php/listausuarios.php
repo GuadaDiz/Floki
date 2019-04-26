@@ -2,7 +2,7 @@
   require "funciones.php";
 
   if(!usuarioLogueado()){
-    header("Location:index.php");
+    header("Location:home.php");
     exit;
   }
   $usuarios = listaDeUsuarios()["usuarios"];
