@@ -682,7 +682,6 @@ header marquee {
   }
 }
 
-
 /* SHOP */
 
 /* banner */
@@ -715,15 +714,65 @@ padding: 20px;
   text-transform: uppercase;
 }
 
+/* PERFIL */
 
-}
-@media (max-width: 768px){
-
-
-}
-@media (max-width: 992px){
-
+.h2perfil, .listperfil{
+  text-transform: uppercase;
+  color: #0D4659;
 }
 
+.perfil ul{
+  padding:0;
+}
+
+.listperfil:hover{
+  text-decoration: none;
+  color:  #98DAE0;
+}
+
+.perfil button{
+  box-sizing: border-box;
+  height: 40px;
+  color: #0d4659;
+  font-size: 1em;
+  text-transform: uppercase;
+  background-color: white;
+  border: none;
+  border-radius: 0px;
+  margin-top: 20px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+.perfil button:hover {
+  color: white;
+  background-color: #0d4659;
+}
+.perfil button:focus {
+  box-shadow: none;
+}
+
+.perfil label {
+  padding: 10px 0 0;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: #0D4659;
+  text-transform: uppercase;  
+}
+
+.perfil form{
+  width: 80%;
+}
+
+.perfil input{
+  box-sizing: border-box;
+  height: 5vh;
+  color: #0d4659;
+  font-size: 0.75em;
+  background-color: white;
+  margin-top: 3px;
+  text-transform: uppercase;
+}
 
 

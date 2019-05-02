@@ -29,7 +29,6 @@ function existeElUsuario($email)
     return comprobarUsuario($email) !== null;
 }
 
-
 function listaDeUsuarios(){
     $json = file_get_contents("db.json");
     $array = json_decode($json, true);
@@ -91,7 +90,7 @@ function lastId()
     $array = json_decode($json, true);
 
     if ($json == "") {
-        return $lastId = 0;
+        return $lastId = 1;
     }
     $ultimoElemento = array_pop($array["usuarios"]);
     $lastId = $ultimoElemento["id"] + 1;
@@ -152,6 +151,7 @@ function loguearUsuario($user)
     $_SESSION["nombre"] = $usuario["nombre"];
     $_SESSION["apellido"] = $usuario["apellido"];
     $_SESSION["id"] = $usuario["id"];
+    $_SESSION["cumple"] = $usuario["cumple"];
 }
 
 function traerUsuarioLogueado()
@@ -175,27 +175,29 @@ function logOut()
     header("Location: home.php");
 }
 
-// function actualizarUsuario($user)
-// {
-//     $usuarioActualizado = [
-//         "nombre" => trim($user["nombre"]),
-//         "apellido" => trim($user["apellido"]),
-//         "cumple" => $user["cumple"]
-//     ];
+function actualizarUsuario($user)
+{
+    $usuarioActualizado = [
+        "nombre" => trim($user["nombre"]),
+        "apellido" => trim($user["apellido"]),
+        "cumple" => $user["cumple"]
+    ];
 
-//     $json = file_get_contents("db.json");
-//     $array = json_decode($json, true);
+    $json = file_get_contents("db.json");
+    $array = json_decode($json, true);
 
-//     foreach($array["usuarios"] as $usuario) {
-//         if ($_SESSION["id"] == $usuario["id"]) {
-//             $usuario["nombre"] = $usuarioActualizado["nombre"];
-//             $usuario["apellido"] = $usuarioActualizado["apellido"];
-//             $usuario["cumple"] = $usuarioActualizado["cumple"];
-//         };
-//     }   
-//     $array = json_encode($array, JSON_PRETTY_PRINT);
-//     file_put_contents("db.json", $array);
-// }
+    foreach($array["usuarios"] as $usuario) {
+        if ($_SESSION["id"] == $usuario["id"]) {
+            $usuario["nombre"] = $usuarioActualizado["nombre"];
+            $usuario["apellido"] = $usuarioActualizado["apellido"];
+            $usuario["cumple"] = $usuarioActualizado["cumple"];
+        };
+        $array["usuarios"][$usuario["id"]] = $usuario;   
+    }   
+    $array = json_encode($array, JSON_PRETTY_PRINT);
+    file_put_contents("db.json", $array);
+}
+
 
 
 // function validarAvatar($archivo)

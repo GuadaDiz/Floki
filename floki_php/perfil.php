@@ -1,18 +1,20 @@
 <?php
 
 require("funciones.php");
-if(!usuarioLogueado()){
+if (!usuarioLogueado()) {
     header("Location:home.php");
 }
 $usuario = traerUsuarioLogueado();
 
 
 
-// if($_POST){
-//     actualizarUsuario($_POST);
-// }
+if ($_POST) {
+    $errores = validarRegistro($_POST);
 
-
+    if (empty($errores)) {
+        actualizarUsuario($_POST);
+    };
+}
 // if ($_FILES) {
 //     $file = null;
 //     $errorAvatar = validarAvatar($_FILES);
@@ -34,34 +36,65 @@ $usuario = traerUsuarioLogueado();
     <!-- header -->
     <?php include("header.php") ?>
 
-    <div class="container ">
+    <div class="container perfil">
         <div class="row">
             <div class="col-12 col-sm-4 ">
-                <h2>cuenta</h2>
+                <h2 class="h2perfil">cuenta</h2>
                 <ul>
                     <li>
-                        <a href="">perfil</a>
+                        <a class="listperfil" href="">perfil</a>
                     </li>
                     <li>
-                        <a href="">historial de ordenes</a>
+                        <a class="listperfil" href="">historial de ordenes</a>
                     </li>
                     <li>
-                        <a href="">direcciones guardadas</a>
+                        <a class="listperfil" href="">direcciones guardadas</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-12 col-sm-8">
-                <h2>perfil</h2>
+            <div class="col-12 col-sm-8">   
+                <h2 class="h2perfil">perfil</h2>
                 <form action="" method="post" enctype="multipart/form-data">
                     <div>
-                     <input class="form-control" type="text" name="nombre" placeholder="<?=$usuario["nombre"]?>"> 
+                   <label for="nombre">Nombre</label>
+                        <?php if (isset($errores["nombre"])) : ?>
+                            <input class="form-control" type="text" name="nombre" value="<?= $_SESSION["nombre"] ?>">
+                            <div>
+                                <small class="text-muted">
+                                    <?= $errores["nombre"] ?>
+                                </small>
+                            </div>
+                        <?php elseif (isset($_POST["nombre"])) : ?>
+                            <input class="form-control" type="text" name="nombre" value="<?= $_POST["nombre"] ?>">
+                        <?php elseif (isset($_SESSION["nombre"])) : ?>
+                            <input class="form-control" type="text" name="nombre" value="<?= $_SESSION["nombre"] ?>">
+                        <?php endif ?>
                     </div>
                     <div>
-                         <input class="form-control" type="text" name="apellido" placeholder="<?=$usuario["apellido"]?>">
+                    <label for="apellido">Apellido</label>
+                        <?php if (isset($errores["apellido"])) : ?>
+                            <input class="form-control" type="text" name="apellido" value="<?= $_SESSION["apellido"] ?>">
+                            <div>
+                                <small class="text-muted">
+                                    <?= $errores["apellido"] ?>
+                                </small>
+                            </div>
+                        <?php elseif (isset($_POST["apellido"])) : ?>
+                            <input class="form-control" type="text" name="apellido" value="<?= $_POST["apellido"] ?>">
+                        <?php elseif (isset($_SESSION["apellido"])) : ?>
+                            <input class="form-control" type="text" name="apellido" value="<?= $_SESSION["apellido"] ?>">
+                        <?php endif ?>
                     </div>
+
                     <div>
-                        <div> <label for="cumpleaños">Cumpleaños</label></div>
-                        <input class="form-control" type="date" name="cumple" placeholder="cumpleaños">
+                        <div> <label for="cumple">Cumpleaños</label></div>
+                        <?php if (isset($_POST["cumple"])) : ?>
+                            <input class="form-control" type="date" name="cumple" min="1910-01-01" value="<?= $_POST["cumple"] ?>">
+                        <?php elseif (isset($_SESSION["cumple"])) : ?>
+                            <input class="form-control" type="date" name="cumple" min="1910-01-01" value="<?= $_SESSION["cumple"] ?>">
+                        <?php else : ?>
+                            <input class="form-control" type="date" name="cumple" min="1910-01-01" value="<?php echo date("Y-m-d") ?>">
+                        <?php endif ?>
                     </div>
                     <button type="submit">Actualizar</button>
                 </form>
