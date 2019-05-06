@@ -9,7 +9,7 @@ $usuario = traerUsuarioLogueado();
 
 
 if ($_POST) {
-    $errores = validarRegistro($_POST);
+    $errores = validarPerfil($_POST);
 
     if (empty($errores)) {
         actualizarUsuario($_POST);
@@ -88,10 +88,15 @@ if ($_POST) {
 
                     <div>
                         <div> <label for="cumple">Cumpleaños</label></div>
-                        <?php if (isset($_POST["cumple"])) : ?>
+                        <?php if (isset($errores["cumple"])) : ?>
+                            <input class="form-control" ttype="date" name="cumple" min="1910-01-01" value="<?= $_SESSION["cumple"] ?>">
+                            <div>
+                                <small class="text-muted">
+                                    <?= $errores["cumple"] ?>
+                                </small>
+                            </div>
+                        <?php elseif (isset($_POST["cumple"])) : ?>
                             <input class="form-control" type="date" name="cumple" min="1910-01-01" value="<?= $_POST["cumple"] ?>">
-                        <?php elseif (isset($_SESSION["cumple"])) : ?>
-                            <input class="form-control" type="date" name="cumple" min="1910-01-01" value="<?= $_SESSION["cumple"] ?>">
                         <?php else : ?>
                             <input class="form-control" type="date" name="cumple" min="1910-01-01" value="<?php echo date("Y-m-d") ?>">
                         <?php endif ?>

@@ -144,6 +144,34 @@ function validarLogin($datos)
     return $errores;
 }
 
+function validarPerfil ($datos){
+
+    $errores = [];
+    $datosFinales = [];
+    foreach ($datos as $posicion => $valor) {
+        $datosFinales[$posicion] = trim($valor);
+    }
+
+    if (empty($datosFinales["nombre"])) {
+        $errores["nombre"] = "Por favor ingrese su nombre";
+    } elseif (!preg_match('/^(\s)*[\p{L}-]+((\s)?((\'|\-)?([\p{L}-])+))*(\s)*$/u', ($datosFinales["nombre"]))) {
+        $errores["nombre"] = "El campo nombre debe contener solo letras";
+    }
+
+    if (empty($datosFinales["apellido"])) {
+        $errores["apellido"] = "Por favor ingrese su apellido ";
+    } elseif (!preg_match('/^(\s)*[\p{L}-]+((\s)?((\'|\-)?([\p{L}-])+))*(\s)*$/u', ($datosFinales["apellido"]))) {
+        $errores["apellido"] = "El campo apellido debe contener solo letras";
+    }
+
+    if(!preg_match('/^[1-2][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9]$/', ($datos["cumple"]))){
+        $errores["cumple"] = "Ingrese una fecha válida. Formato YYYY-MM-DD";
+    }
+
+    return $errores;
+}
+
+
 function loguearUsuario($user)
 {
     $usuario = comprobarUsuario($user["email"]);
