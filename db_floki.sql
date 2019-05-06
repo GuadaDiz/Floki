@@ -77,6 +77,76 @@ ON DELETE set null
 ON UPDATE cascade
 );
 
+CREATE TABLE correos(
+id int not null auto_increment primary key,
+nombre varchar(50) not null,
+email varchar(50),
+telefono int(20)
+);
+
+
+CREATE TABLE estado_compra(
+id int not null auto_increment primary key,
+estado varchar(20)
+);
+
+INSERT INTO estado_compra VALUES(default, "ESPERANDO PAGO");
+INSERT INTO estado_compra VALUES(default, "PAGO APROBADO");
+INSERT INTO estado_compra VALUES(default, "PAGO RECHAZADO");
+INSERT INTO estado_compra VALUES(default, "COMPRA CANCELADA");
+INSERT INTO estado_compra VALUES(default, "ENVIO REALIZADO");
+INSERT INTO estado_compra VALUES(default, "COMPRA FINALIZADA OK");
+INSERT INTO estado_compra VALUES(default, "RECLAMADA");
+
+
+CREATE TABLE compras(
+id int not null auto_increment primary key,
+cliente_id int,
+fecha datetime not null,
+cantidad_productos int,
+precio_final decimal (6,2) not null,
+monto_descuento decimal (6,2),
+domicilio_envio_id int,
+fecha_envio date,
+correo_id int,
+estado_id int,
+FOREIGN KEY fk_cliente_compra(cliente_id)
+REFERENCES clientes(id)
+ON DELETE set null
+ON UPDATE cascade,
+FOREIGN KEY fk_domicilio_envio(domicilio_envio_id)
+REFERENCES domicilios(id)
+ON DELETE set null
+ON UPDATE cascade,
+FOREIGN KEY fk_correos(correo_id)
+REFERENCES correos(id)
+ON DELETE set null
+ON UPDATE cascade,
+FOREIGN KEY fk_estado_compra(estado_id)
+REFERENCES estado_compra(id)
+ON DELETE set null
+ON UPDATE cascade
+);
+
+CREATE TABLE detalle_compra(
+id int not null auto_increment primary key,
+compra_id int,
+producto_id int,
+precio_final decimal(6,2),
+descuento decimal(2,2),
+FOREIGN KEY fk_compra(compra_id)
+REFERENCES compras(id)
+ON DELETE set null
+ON UPDATE cascade,
+FOREIGN KEY fk_producto_comprado(producto_id)
+REFERENCES productos(id)
+ON DELETE set null
+ON UPDATE cascade
+);
+
+ALTER TABLE productos
+ADD fotos varchar(100);
+
 
 
 
