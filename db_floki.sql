@@ -1,14 +1,14 @@
 create schema db_floki;
 
-CREATE TABLE roles(
+CREATE TABLE db_floki.roles(
 id int not null auto_increment primary key,
 rol varchar(50) not null);
 
-INSERT INTO roles VALUES(default, "ADMIN");
-INSERT INTO roles VALUES(default, "USUARIO REGISTRADO");
-INSERT INTO roles VALUES(default, "INVITADO");
+INSERT INTO db_floki.roles VALUES(default, "ADMIN");
+INSERT INTO db_floki.roles VALUES(default, "USUARIO REGISTRADO");
+INSERT INTO db_floki.roles VALUES(default, "INVITADO");
 
-CREATE TABLE clientes(
+CREATE TABLE db_floki.usuarios(
 id int not null auto_increment primary key,
 nombre varchar(50) not null,
 apellido varchar(50) not null,
@@ -23,7 +23,7 @@ ON DELETE restrict
 ON UPDATE cascade
 ); 
 
-CREATE TABLE domicilios(
+CREATE TABLE db_floki.domicilios(
 id int not null auto_increment primary key,
 domicilio_linea1 varchar(100),
 domicilio_linea2 varchar(100),
@@ -32,38 +32,39 @@ provincia varchar(30),
 pais varchar(30),
 codigo_postal int,
 tipo varchar(20),
-cliente_id int,
-FOREIGN KEY fk_clientes(cliente_id)
-REFERENCES clientes(id)
+usuario_id int,
+FOREIGN KEY fk_usuarios(usuario_id)
+REFERENCES usuarios(id)
 ON DELETE set null
 ON UPDATE cascade
 );
 
-CREATE TABLE descuentos(
+CREATE TABLE db_floki.descuentos(
 id int not null auto_increment primary key,
 porcentaje int not null,
 estado varchar(20)
 );
 
-CREATE TABLE categorias(
+CREATE TABLE db_floki.categorias(
 id int not null auto_increment primary key,
 nombre varchar(50) not null
 );
 
-CREATE TABLE productos(
+CREATE TABLE db_floki.productos(
 id int not null auto_increment primary key,
 nombre varchar(100) not null,
 precio decimal(6,2) not null,
 descripcion text,
 stock int,
 descuento_id int,
+fotos varchar(100),
 FOREIGN KEY fk_descuentos(descuento_id)
 REFERENCES descuentos(id)
 ON DELETE set null
 ON UPDATE cascade
 );
 
-CREATE TABLE producto_categoria(
+CREATE TABLE db_floki.producto_categoria(
 id int not null auto_increment primary key,
 producto_id int,
 categoria_id int,
@@ -77,7 +78,7 @@ ON DELETE set null
 ON UPDATE cascade
 );
 
-CREATE TABLE correos(
+CREATE TABLE db_floki.correos(
 id int not null auto_increment primary key,
 nombre varchar(50) not null,
 email varchar(50),
@@ -85,33 +86,33 @@ telefono int(20)
 );
 
 
-CREATE TABLE estado_compra(
+CREATE TABLE db_floki.estado_compra(
 id int not null auto_increment primary key,
 estado varchar(20)
 );
 
-INSERT INTO estado_compra VALUES(default, "ESPERANDO PAGO");
-INSERT INTO estado_compra VALUES(default, "PAGO APROBADO");
-INSERT INTO estado_compra VALUES(default, "PAGO RECHAZADO");
-INSERT INTO estado_compra VALUES(default, "COMPRA CANCELADA");
-INSERT INTO estado_compra VALUES(default, "ENVIO REALIZADO");
-INSERT INTO estado_compra VALUES(default, "COMPRA FINALIZADA OK");
-INSERT INTO estado_compra VALUES(default, "RECLAMADA");
+INSERT INTO db_floki.estado_compra VALUES(default, "ESPERANDO PAGO");
+INSERT INTO db_floki.estado_compra VALUES(default, "PAGO APROBADO");
+INSERT INTO db_floki.estado_compra VALUES(default, "PAGO RECHAZADO");
+INSERT INTO db_floki.estado_compra VALUES(default, "COMPRA CANCELADA");
+INSERT INTO db_floki.estado_compra VALUES(default, "ENVIO REALIZADO");
+INSERT INTO db_floki.estado_compra VALUES(default, "COMPRA FINALIZADA OK");
+INSERT INTO db_floki.estado_compra VALUES(default, "RECLAMADA");
 
 
-CREATE TABLE compras(
+CREATE TABLE db_floki.compras(
 id int not null auto_increment primary key,
-cliente_id int,
-fecha datetime not null,
+usuario_id int,
+fecha datetime,
 cantidad_productos int,
 precio_final decimal (6,2) not null,
-monto_descuento decimal (6,2),
+monto_descuento int,
 domicilio_envio_id int,
 fecha_envio date,
 correo_id int,
 estado_id int,
-FOREIGN KEY fk_cliente_compra(cliente_id)
-REFERENCES clientes(id)
+FOREIGN KEY fk_usuario_compra(usuario_id)
+REFERENCES usuarios(id)
 ON DELETE set null
 ON UPDATE cascade,
 FOREIGN KEY fk_domicilio_envio(domicilio_envio_id)
@@ -128,12 +129,13 @@ ON DELETE set null
 ON UPDATE cascade
 );
 
-CREATE TABLE detalle_compra(
+CREATE TABLE db_floki.detalle_compra(
 id int not null auto_increment primary key,
 compra_id int,
 producto_id int,
+cantidad int,
 precio_final decimal(6,2),
-descuento decimal(2,2),
+descuento int,
 FOREIGN KEY fk_compra(compra_id)
 REFERENCES compras(id)
 ON DELETE set null
@@ -143,9 +145,6 @@ REFERENCES productos(id)
 ON DELETE set null
 ON UPDATE cascade
 );
-
-ALTER TABLE productos
-ADD fotos varchar(100);
 
 
 
