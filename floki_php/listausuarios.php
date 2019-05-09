@@ -5,7 +5,7 @@
     header("Location:home.php");
     exit;
   }
-  $usuarios = listaDeUsuarios()["usuarios"];
+  $usuarios = listaDeUsuarios();  
   $usuario = traerUsuarioLogueado();
 ?>
 <html lang="en" dir="ltr">

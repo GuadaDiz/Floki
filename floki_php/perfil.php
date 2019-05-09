@@ -10,7 +10,7 @@ $usuario = traerUsuarioLogueado();
 
 if ($_POST) {
     $errores = validarPerfil($_POST);
-
+    
     if (empty($errores)) {
         actualizarUsuario($_POST);
     };
@@ -85,11 +85,27 @@ if ($_POST) {
                             <input class="form-control" type="text" name="apellido" value="<?= $_SESSION["apellido"] ?>">
                         <?php endif ?>
                     </div>
-
+                    <div>
+                    <label for="telefono">Telefono</label>
+                        <?php if (isset($errores["telefono"])) : ?>
+                            <input class="form-control" type="text" name="telefono" value="<?= $_SESSION["telefono"] ?>">
+                            <div>
+                                <small class="text-muted">
+                                    <?= $errores["telefono"] ?>
+                                </small>
+                            </div>
+                        <?php elseif (isset($_POST["telefono"])) : ?>
+                            <input class="form-control" type="number" name="telefono" value="<?= $_POST["telefono"] ?>">
+                        <?php elseif (isset($_SESSION["telefono"])) : ?>
+                            <input class="form-control" type="number" name="telefono" value="<?= $_SESSION["telefono"] ?>">
+                        <?php else : ?>
+                        <input class="form-control" type="number" name="telefono" value="">
+                        <?php endif ?>
+                    </div>
                     <div>
                         <div> <label for="cumple">Cumpleaños</label></div>
                         <?php if (isset($errores["cumple"])) : ?>
-                            <input class="form-control" ttype="date" name="cumple" min="1910-01-01" value="<?= $_SESSION["cumple"] ?>">
+                            <input class="form-control" type="date" name="cumple" min="1910-01-01" value="<?= $_SESSION["cumple"] ?>">
                             <div>
                                 <small class="text-muted">
                                     <?= $errores["cumple"] ?>

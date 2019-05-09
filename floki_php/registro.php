@@ -98,7 +98,7 @@ if ($_POST) {
                     </p>
 
                     <p>
-                        <div><input class="tyc" type="checkbox" name="news" value="novedades" />
+                        <div><input class="tyc" type="checkbox" name="news" value= true />
                             Deseo recibir novedades en mi email.</div>
                         <div>
                             <?php if (isset($errores["tyc"])) : ?>
