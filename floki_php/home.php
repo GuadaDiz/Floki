@@ -1,4 +1,4 @@
-<?php require("funciones.php");
+<?php require("classes/init.php");
 
 
 ?>

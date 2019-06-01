@@ -1,5 +1,5 @@
 <?php
-  require "funciones.php";
+  require "init.php";
 
   if(!usuarioLogueado()){
     header("Location:home.php");

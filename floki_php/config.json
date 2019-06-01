@@ -1,0 +1,6 @@
+{
+    "dbUser": "root",
+    "dbPass": "",
+    "dbName": "db_floki",
+    "dbPort": "3306"
+}

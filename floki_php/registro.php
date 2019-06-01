@@ -1,15 +1,23 @@
 <?php
-require("funciones.php");
-if(usuarioLogueado()){
+// require("funciones.php");
+require_once("classes/init.php");
+
+if($auth->usuarioLogueado()){
     header("Location:home.php");
+    exit;
 }
+
 if ($_POST) {
     // validar datos del form
-    $errores = validarRegistro($_POST);
+    $errores = Validator::validarRegistro($_POST);
 
     if (empty($errores)) {
-        $usuario = armarUsuario($_POST);
-        guardarUsuario($usuario);
+        $usuario = new Usuario($_POST);
+       
+        $dbMysql->guardarUsuario($usuario);
+        // $dbJson->armarUsuario($usuario);
+        // $dbJson->guardarUsuario($usuario);
+    
         header("Location:login.php");
     }
 }
@@ -82,7 +90,7 @@ if ($_POST) {
                         <?php if (isset($errores["pass"])) : ?>
                             <input class="userform" id="contraseña lefttip" type="password" name="pass" value="" data-toggle="tooltip" data-placement="top" title="Al menos 8 caracteres, una mayúscula, una minúscula y un número." placeholder="<?= $errores["pass"] ?>" />
                         <?php elseif (isset($_POST["pass"])) : ?>
-                            <input class="userform" id="contraseña lefttip" type="password" name="pass" value="" data-toggle="tooltip" data-placement="top" title="Al menos 8 caracteres, una mayúscula, una minúscula y un número." placeholder="Ingrese su contraseña" />
+                            <input class="userform" id="contraseña lefttip" type="password" name="pass" value="" data-toggle="tooltip" data-placement="top" title="Al menos 8 caracteres, una mayúscula, una minúscula y un número." placeholder="Contraseña" />
                         <?php else : ?>
                             <input class="userform tooptip-pass" id="contraseña lefttip" type="password" name="pass" value="" data-toggle="tooltip" data-placement="top" title="Al menos 8 caracteres, una mayúscula, una minúscula y un número." placeholder="Contraseña" />
                         <?php endif ?>

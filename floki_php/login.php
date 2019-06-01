@@ -1,29 +1,25 @@
 <?php
-require("funciones.php");
+require("classes/init.php");
 
-if(usuarioLogueado()){
+if($auth->usuarioLogueado()){
     header("Location:home.php");
 }
 
 if ($_POST) {
     // validar datos del form
-    $errores = validarLogin($_POST);
+    $errores = Validator::validarLogin($_POST);
 
     if (empty($errores)) {
         if(isset($_POST["recordarme"]) && $_POST["recordarme"]!=""){
             setcookie("user", $_POST["email"], time()+ 60);
         }
-        loguearUsuario($_POST);
+        $auth->loguearUsuario($_POST);
         header("Location:home.php");
     }
 }
-
-
 ?>
 
-
 <html lang="en" dir="ltr">
-
 <head>
     <?php include("head.php") ?>
     <title>Login</title>

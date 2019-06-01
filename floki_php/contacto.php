@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-require("funciones.php");
+require("classes/init.php");
 
 ?>?>
 <html lang="en" dir="ltr">
