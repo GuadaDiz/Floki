@@ -14,9 +14,9 @@ if ($_POST) {
     if (empty($errores)) {
         $usuario = new Usuario($_POST);
        
-        $dbMysql->guardarUsuario($usuario);
-        // $dbJson->armarUsuario($usuario);
-        // $dbJson->guardarUsuario($usuario);
+        // $dbMysql->guardarUsuario($usuario);
+        $dbJson->armarUsuario($usuario);
+        $dbJson->guardarUsuario($usuario);
     
         header("Location:login.php");
     }

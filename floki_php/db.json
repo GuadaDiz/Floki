@@ -1,0 +1,26 @@
+{
+    "usuarios": [
+        {
+            "id": 0,
+            "nombre": "belu",
+            "apellido": "iocca",
+            "email": "beluiocca@gmail.com",
+            "pass": "$2y$10$I.c8IPAf96e5L793cFTAfevZ5uVgwhzUqg2vqsZ2d6.S91LnXO7ay",
+            "cumple": "2019-10-16"
+        },
+        {
+            "id": 1,
+            "nombre": "guada",
+            "apellido": "diz",
+            "email": "guada@gmail.com",
+            "pass": "$2y$10$FSzyBtOfszKJbi1vFd6ekur73o3kC7KRT1JLoRR56hII59MVIv6ba"
+        },
+        {
+            "id": 2,
+            "nombre": "sol",
+            "apellido": "black",
+            "email": "sol@gmail.com",
+            "pass": "$2y$10$rXN6yUBSuLni1QvxfOG.TOIlBtECENw6ydEo\/r.2vOUT43V9F0rhu"
+        }   
+    ]
+}

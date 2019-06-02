@@ -9,22 +9,26 @@ class dbJson extends Db
     {
         $json = file_get_contents("db.json");
         $array = json_decode($json, true);
+        
         if ($json == "") {
             $lastId = 1;
-        } else {
-            $ultimoElemento = array_pop($array["usuarios"]);
-            $lastId = $ultimoElemento["id"] + 1;
+            $usuario->setId($lastId);
+            return $usuario;
         }
 
-        $usuario->setId($lastId);
-        return $usuario;
+            $ultimoElemento = array_pop($array["usuarios"]);
+            $lastId = $ultimoElemento["id"] + 1;    
+            $usuario->setId($lastId);
+            return $usuario;      
     }
 
-    public function guardarUsuario($usuario)
+    public function guardarUsuario(Usuario $usuario)
     {
+        var_dump($usuario);
         $json = file_get_contents("db.json");
         $array = json_decode($json, true);
         $array["usuarios"][] = $usuario;
+       var_dump($array);
         $array = json_encode($array, JSON_PRETTY_PRINT);
         file_put_contents("db.json", $array);
     }
