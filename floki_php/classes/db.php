@@ -1,5 +1,4 @@
 <?php
-include "usuario.php";
 
 abstract class Db
 {

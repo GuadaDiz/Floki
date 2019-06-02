@@ -1,6 +1,6 @@
 <?php
 // require("funciones.php");
-require_once("classes/init.php");
+require_once("init.php");
 
 if($auth->usuarioLogueado()){
     header("Location:home.php");
@@ -13,11 +13,10 @@ if ($_POST) {
 
     if (empty($errores)) {
         $usuario = new Usuario($_POST);
-       
-        // $dbMysql->guardarUsuario($usuario);
-        $dbJson->armarUsuario($usuario);
-        $dbJson->guardarUsuario($usuario);
-    
+
+        $dbMysql->guardarUsuario($usuario);
+        // $dbJson->armarUsuario($usuario);
+        // $dbJson->guardarUsuario($usuario);
         header("Location:login.php");
     }
 }

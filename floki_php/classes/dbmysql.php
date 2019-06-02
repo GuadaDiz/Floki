@@ -1,5 +1,6 @@
 <?php
-// include "db.php";
+ include "db.php";
+ include "usuario.php";
 
 class dbMysql extends Db
 {
@@ -28,7 +29,7 @@ class dbMysql extends Db
 
   public function guardarUsuario(Usuario $usuario)
 {
-    $stmt = $this->conection->prepare("INSERT into usuarios VALUES(default, :nombre, :apellido, :email, :pass, default, default, default, :news)");
+    $stmt = $this->conection->prepare("INSERT into usuarios VALUES(default, :nombre, :apellido, :email, :pass, default, default, 2, :news)");
     $stmt->bindValue(":nombre", $usuario->getNombre());
     $stmt->bindValue(":apellido", $usuario->getApellido());
     $stmt->bindValue(":email", $usuario->getEmail());
@@ -66,7 +67,7 @@ function listaDeUsuarios()
 }
 
 function actualizarUsuario($user)
-{    
+{
     $email = $_SESSION["email"];
     $stmt = $this->conection->prepare("UPDATE usuarios SET nombre = :nombre, apellido = :apellido, telefono = :telefono, fecha_nacimiento = :fecha_nacimiento WHERE email = '$email'");
     $stmt->bindValue(":nombre", $user->getNombre());
