@@ -13,10 +13,11 @@ id int not null auto_increment primary key,
 nombre varchar(50) not null,
 apellido varchar(50) not null,
 email varchar(50) not null,
-pass varchar(50) not null,
+pass text not null,
 telefono int,
 fecha_nacimiento date,
 rol_id int not null,
+news tinyint(1) not null,
 FOREIGN KEY fk_roles(rol_id)
 REFERENCES roles(id)
 ON DELETE restrict

@@ -1,5 +1,5 @@
 <?php
-require("classes/init.php");
+require("init.php");
 
 if($auth->usuarioLogueado()){
     header("Location:home.php");
@@ -60,7 +60,7 @@ if ($_POST) {
                         <?php if (isset($errores["email"])) : ?>
                             <input class="userform" id="email" type="email" name="email" placeholder="<?= $errores["email"] ?>" />
                         <?php elseif (isset($_POST["email"])) : ?>
-                            <input class="userform" id="email" type="email" name="email" placeholder="<?= $_POST["email"] ?>" />
+                            <input class="userform" id="email" type="email" name="email" placeholder="<?= $_POST["email"] ?>" value="<?= $_POST["email"] ?>" />
                         <?php else : ?>
                             <input class="userform" id="email" type="email" name="email" placeholder="Email" />
                         <?php endif ?>

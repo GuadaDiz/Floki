@@ -22,9 +22,9 @@ class Usuario {
         }
 
         if(isset($datos["news"])){
-            $this->news = 0;
-        } else {
             $this->news = 1;
+        } else {
+            $this->news = 0;
         }
 
         if(isset($datos["telefono"])){
@@ -119,5 +119,3 @@ class Usuario {
 
 
 }
-
-
