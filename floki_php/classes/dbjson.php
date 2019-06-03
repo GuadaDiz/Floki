@@ -5,7 +5,7 @@ class dbJson extends Db
 
 {
 
-    public function armarUsuario(Usuario $usuario)
+    public function guardarUsuario($usuario)
     {
         $json = file_get_contents("db.json");
         $array = json_decode($json, true);
@@ -16,15 +16,17 @@ class dbJson extends Db
             $lastId = $ultimoElemento["id"] + 1;
         }
 
-        $usuario->setId($lastId);
-        return $usuario;
-    }
+        $usuarioJS = [
+          "id" => $lastId,
+          "Nombre" => $usuario->getNombre(),
+          "Apellido" => $usuario->getApellido(),
+          "Email" => $usuario->getEmail(),
+          "Pass" => $usuario->getPassword(),
+          "News" => $usuario->getNews()
+        ];
 
-    public function guardarUsuario($usuario)
-    {
-        $json = file_get_contents("db.json");
-        $array = json_decode($json, true);
-        $array["usuarios"][] = $usuario;
+
+        $array["usuarios"][] = $usuarioJS;
         $array = json_encode($array, JSON_PRETTY_PRINT);
         file_put_contents("db.json", $array);
     }

@@ -1,0 +1,12 @@
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "Nombre": "sol",
+            "Apellido": "Black",
+            "Email": "solblack@gmail.com",
+            "Pass": "$2y$10$LkLry59aSZpXA\/UbilaVEu8nED43AA5uflphtQHujnBBj53eLirN6",
+            "News": 1
+        }
+    ]
+}
