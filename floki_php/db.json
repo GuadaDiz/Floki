@@ -3,9 +3,9 @@
         {
             "id": 1,
             "Nombre": "sol",
-            "Apellido": "Black",
-            "Email": "solblack@gmail.com",
-            "Pass": "$2y$10$LkLry59aSZpXA\/UbilaVEu8nED43AA5uflphtQHujnBBj53eLirN6",
+            "Apellido": "testing",
+            "Email": "Testing@gmail.commmm",
+            "Pass": "$2y$10$qV.8rAd6tI44tZPnuwLQU.P6Uw15\/lD3oC0o5BHkhM\/0eUG0MBfy.",
             "News": 1
         }
     ]

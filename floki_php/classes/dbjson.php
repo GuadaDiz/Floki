@@ -7,16 +7,15 @@ class dbJson extends Db
 
     public function guardarUsuario($usuario)
     {
-        $json = file_get_contents("db.json");
-        $array = json_decode($json, true);
-        
-        if ($json == "") {
-            $lastId = 1;
-            $usuario->setId($lastId);
-            return $usuario;
-        }
+      $json = file_get_contents("db.json");
+     $array = json_decode($json, true);
+     if ($json == "") {
+         $lastId = 1;
+     } else {
+         $ultimoElemento = end($array["usuarios"]);
+         $lastId = $ultimoElemento["id"] + 1;
+     }
 
-<<<<<<< HEAD
         $usuarioJS = [
           "id" => $lastId,
           "Nombre" => $usuario->getNombre(),
@@ -27,27 +26,12 @@ class dbJson extends Db
         ];
 
 
-        $array["usuarios"][] = $usuarioJS;
-=======
-            $ultimoElemento = array_pop($array["usuarios"]);
-            $lastId = $ultimoElemento["id"] + 1;    
-            $usuario->setId($lastId);
-            return $usuario;      
-    }
-
-    public function guardarUsuario(Usuario $usuario)
-    {
-        var_dump($usuario);
-        $json = file_get_contents("db.json");
-        $array = json_decode($json, true);
-        $array["usuarios"][] = $usuario;
-       var_dump($array);
->>>>>>> 6902f66c28ae1e386cfa512b0893ec8aed51da33
+        array_push($array["usuarios"], $usuarioJS);
         $array = json_encode($array, JSON_PRETTY_PRINT);
         file_put_contents("db.json", $array);
     }
 
-    function comprobarUsuario($email)
+        function comprobarUsuario($email)
     {
         if (!file_exists("db.json")) {
             $usuarios = "";

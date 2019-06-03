@@ -15,13 +15,8 @@ if ($_POST) {
         $usuario = new Usuario($_POST);
 
         $dbMysql->guardarUsuario($usuario);
-<<<<<<< HEAD
         $dbJson->guardarUsuario($usuario);
 
-=======
-        // $dbJson->armarUsuario($usuario);
-        // $dbJson->guardarUsuario($usuario);
->>>>>>> 6902f66c28ae1e386cfa512b0893ec8aed51da33
         header("Location:login.php");
     }
 }
