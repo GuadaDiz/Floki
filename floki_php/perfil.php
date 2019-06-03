@@ -1,6 +1,6 @@
 <?php
 
-require("classes/init.php");
+require("init.php");
 if (!$auth->usuarioLogueado()) {
     header("Location:home.php");
 }
