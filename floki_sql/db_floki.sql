@@ -16,7 +16,7 @@ email varchar(50) not null,
 pass text not null,
 telefono int,
 fecha_nacimiento date,
-rol_id int not null,
+rol_id int not null DEFAULT 2,
 news tinyint(1) not null,
 FOREIGN KEY fk_roles(rol_id)
 REFERENCES roles(id)
